@@ -15,6 +15,8 @@
 		813E2FEE20E1913B00D10BF9 /* DirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FED20E1913B00D10BF9 /* DirectoryViewController.swift */; };
 		813E2FF120E1915D00D10BF9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FF020E1915D00D10BF9 /* ProfileViewController.swift */; };
 		813E2FF720E1919100D10BF9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FF620E1919100D10BF9 /* SettingsViewController.swift */; };
+		813E2FF920E195F400D10BF9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */; };
+		813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		813E2FED20E1913B00D10BF9 /* DirectoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryViewController.swift; sourceTree = "<group>"; };
 		813E2FF020E1915D00D10BF9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		813E2FF620E1919100D10BF9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		813E2FE620E18E9600D10BF9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				813E2FFA20E195F800D10BF9 /* Extensions */,
 				0173E88420E18C6F00508EC2 /* Assets.xcassets */,
 				0173E88620E18C6F00508EC2 /* LaunchScreen.storyboard */,
 				0173E88920E18C6F00508EC2 /* Info.plist */,
@@ -119,6 +124,15 @@
 				813E2FF620E1919100D10BF9 /* SettingsViewController.swift */,
 			);
 			path = SettingsTab;
+			sourceTree = "<group>";
+		};
+		813E2FFA20E195F800D10BF9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */,
+				813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,8 +205,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				813E2FF920E195F400D10BF9 /* UIView+Extensions.swift in Sources */,
 				813E2FEE20E1913B00D10BF9 /* DirectoryViewController.swift in Sources */,
 				813E2FE820E18EE300D10BF9 /* MainTabBarController.swift in Sources */,
+				813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */,
 				813E2FF120E1915D00D10BF9 /* ProfileViewController.swift in Sources */,
 				813E2FEB20E1912C00D10BF9 /* FeedViewController.swift in Sources */,
 				0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */,
