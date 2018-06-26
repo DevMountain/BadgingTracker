@@ -14,12 +14,19 @@ class FeedViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.backgroundColor = UIColor(white: 0.90, alpha: 1)
-        collectionView?.register(FeedCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        // Do any additional setup after loading the view.
+        setupCollectionView()
     }
     
     // MARK: - Setup Methods -
+    func setupCollectionView() {
+        collectionView?.backgroundColor = #colorLiteral(red: 0.9607843137, green: 0.9607843137, blue: 0.9607843137, alpha: 1)
+        collectionView?.register(FeedCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = true
+        navigationItem.searchController = searchController
+    }
     
 }
 
@@ -37,13 +44,21 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height: CGFloat = view.frame.width * 0.53
+        let height: CGFloat = view.frame.width * 0.53 // The height is 53% of of the views width
         
-        return CGSize(width: view.frame.width - 22, height: height)
+        return CGSize(width: view.frame.width - 11 + 11, height: height) // 11 + 11 for side insets
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 11, bottom: 0, right: 11)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 11 // Sizing between cells
+    }
+    
+}
+
+extension FeedViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+//        let searchText = searchController.searchBar.text ?? ""
     }
     
 }
