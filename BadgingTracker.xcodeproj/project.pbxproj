@@ -65,10 +65,34 @@
 			isa = PBXGroup;
 			children = (
 				0173E87D20E18C6D00508EC2 /* AppDelegate.swift */,
+				81270A5320E2AB05005F7152 /* Models */,
+				81270A5420E2AB17005F7152 /* ModelControllers */,
+				81270A5220E2AAFA005F7152 /* Views */,
 				813E2FE920E18EE700D10BF9 /* ViewControllers */,
 				813E2FE620E18E9600D10BF9 /* Resources */,
 			);
 			path = BadgingTracker;
+			sourceTree = "<group>";
+		};
+		81270A5220E2AAFA005F7152 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		81270A5320E2AB05005F7152 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		81270A5420E2AB17005F7152 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 		813E2FE620E18E9600D10BF9 /* Resources */ = {
@@ -86,44 +110,12 @@
 			isa = PBXGroup;
 			children = (
 				813E2FE720E18EE300D10BF9 /* MainTabBarController.swift */,
-				813E2FEC20E1912F00D10BF9 /* FeedTab */,
-				813E2FEF20E1914200D10BF9 /* DirectoryTab */,
-				813E2FF220E1916400D10BF9 /* ProfileTab */,
-				813E2FF520E1917C00D10BF9 /* SettingsTab */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		813E2FEC20E1912F00D10BF9 /* FeedTab */ = {
-			isa = PBXGroup;
-			children = (
 				813E2FEA20E1912C00D10BF9 /* FeedViewController.swift */,
-			);
-			path = FeedTab;
-			sourceTree = "<group>";
-		};
-		813E2FEF20E1914200D10BF9 /* DirectoryTab */ = {
-			isa = PBXGroup;
-			children = (
 				813E2FED20E1913B00D10BF9 /* DirectoryViewController.swift */,
-			);
-			path = DirectoryTab;
-			sourceTree = "<group>";
-		};
-		813E2FF220E1916400D10BF9 /* ProfileTab */ = {
-			isa = PBXGroup;
-			children = (
 				813E2FF020E1915D00D10BF9 /* ProfileViewController.swift */,
-			);
-			path = ProfileTab;
-			sourceTree = "<group>";
-		};
-		813E2FF520E1917C00D10BF9 /* SettingsTab */ = {
-			isa = PBXGroup;
-			children = (
 				813E2FF620E1919100D10BF9 /* SettingsViewController.swift */,
 			);
-			path = SettingsTab;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		813E2FFA20E195F800D10BF9 /* Extensions */ = {
