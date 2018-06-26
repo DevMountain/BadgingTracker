@@ -13,7 +13,6 @@ class DirectoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .yellow
-        self.view = OurCustomView()
         // Do any additional setup after loading the view.
     }
 
