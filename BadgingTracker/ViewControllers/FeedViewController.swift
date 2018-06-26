@@ -46,7 +46,7 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height: CGFloat = view.frame.width * 0.53 // The height is 53% of of the views width
         
-        return CGSize(width: view.frame.width - 11 + 11, height: height) // 11 + 11 for side insets
+        return CGSize(width: view.frame.width - 22, height: height) // 11 + 11 for side insets
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
