@@ -41,7 +41,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     ///   - unselectedImage: Unselected image for tab bar
     ///   - selectedImage: Selected image for tab bar
     /// - Returns: Navigation Controller that is returned from the root ViewController
-    fileprivate func navigationControllerWith(rootViewController: UIViewController?, unselectedImage: UIImage, selectedImage: UIImage, title: String) -> UINavigationController {
+    fileprivate func navigationControllerWith(rootViewController: UIViewController?, unselectedImage: UIImage, selectedImage: UIImage, title: String?) -> UINavigationController {
         var viewController: UIViewController
         if rootViewController == nil {
             viewController = UIViewController()
@@ -51,6 +51,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.tabBarItem.image = unselectedImage
         navigationController.tabBarItem.selectedImage = selectedImage
+        
         navigationController.tabBarItem.title = title
         
         return navigationController

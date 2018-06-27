@@ -11,49 +11,48 @@ import UIKit
 class FeedCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
-    
     // UI
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 45 / 2
+        imageView.layer.cornerRadius = 43 / 2
         return imageView
     }()
     
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Jayden Garrick"
-        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.font = UIFont.mainFontRegular(ofSize: 16)
         return label
     }()
     
     let optionsButton: UIButton = {
         let button = UIButton(type: UIButtonType.system)
-        button.setTitle("•••", for: .normal)
-        button.setTitleColor(#colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1), for: .normal)
-        button.tintColor = #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
+        button.setAttributedTitle(NSAttributedString(string: "●●●", attributes: [
+            NSAttributedStringKey.font : UIFont.mainFontRegular(ofSize: 18)
+            ]), for: .normal)
+        button.setTitleColor(#colorLiteral(red: 0.5921568627, green: 0.5921568627, blue: 0.5921568627, alpha: 1), for: .normal)
+        button.tintColor = #colorLiteral(red: 0.5921568627, green: 0.5921568627, blue: 0.5921568627, alpha: 1)
+        button.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2.0)
         return button
     }()
     
     let postTypeLabel: UILabel = {
         let label = UILabel()
         let attributedString = NSMutableAttributedString(string: "8 min", attributes: [
-            NSAttributedStringKey.font : UIFont.systemFont(ofSize: 12),
+            NSAttributedStringKey.font : UIFont.mainFontRegular(ofSize: 12),
             NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
 
             ])
         attributedString.append(NSAttributedString(string: " • ", attributes: [
             NSAttributedStringKey.font : UIFont.systemFont(ofSize: 8),
             NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
-
             ]))
         attributedString.append(NSAttributedString(string: "Private", attributes: [
-            NSAttributedStringKey.font : UIFont.systemFont(ofSize: 12),
+            NSAttributedStringKey.font : UIFont.mainFontRegular(ofSize: 12),
             NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
-
-
             ]))
         label.attributedText = attributedString
         return label
@@ -62,14 +61,14 @@ class FeedCollectionViewCell: UICollectionViewCell {
     let bodyTextLabel: UILabel = {
         let label = UILabel()
         label.text = "Your assessment three has been graded by Jay$Money. You scored a 90%."
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.mainFontRegular(ofSize: 16)
         label.numberOfLines = 0
         return label
     }()
     
     let likesTotalLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 12)
+        label.font = UIFont.mainFontRegular(ofSize: 14)
         label.text = "2 likes"
         label.textColor = #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
         return label
@@ -84,16 +83,16 @@ class FeedCollectionViewCell: UICollectionViewCell {
     let likeButton: UIButton = {
         let button = UIButton(type: UIButtonType.system)
         button.setImage(#imageLiteral(resourceName: "xcaHeart").withRenderingMode(.alwaysOriginal), for: .normal)
-        button.setTitle(" Like", for: .normal)
+        button.setAttributedTitle(NSAttributedString(string: " Like", attributes: [
+            NSAttributedStringKey.font : UIFont.mainFontRegular(ofSize:12)
+            ]), for: .normal)
         button.tintColor = #colorLiteral(red: 0.6745098039, green: 0.6745098039, blue: 0.6745098039, alpha: 1)
         return button
     }()
     
     // MARK: - Init
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         contentView.translatesAutoresizingMaskIntoConstraints = false
         let screenWidth = UIScreen.main.bounds.size.width
         widthAnchor.constraint(equalToConstant: screenWidth - 11 - 11)
@@ -130,11 +129,11 @@ class FeedCollectionViewCell: UICollectionViewCell {
         addSubview(likesTotalLabel)
         addSubview(seperatorView)
         addSubview(likeButton)
-        profileImageView.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 11, paddingLeft: 11, paddingBottom: 0, paddingRight: 0, width: 45, height: 45)
+        profileImageView.anchor(top: topAnchor, left: leftAnchor, bottom: bodyTextLabel.topAnchor, right: nil, paddingTop: 11, paddingLeft: 11, paddingBottom: 11, paddingRight: 0, width: 43, height: 43)
         nameLabel.anchor(top: topAnchor, left: profileImageView.rightAnchor, bottom: nil, right: nil, paddingTop: 15, paddingLeft: 10, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
-        optionsButton.anchor(top: topAnchor, left: nil, bottom: nil, right: rightAnchor, paddingTop: 7, paddingLeft: 0, paddingBottom: 0, paddingRight: 11, width: 22, height: 22)
+        optionsButton.anchor(top: topAnchor, left: nil, bottom: nil, right: rightAnchor, paddingTop: 8, paddingLeft: 0, paddingBottom: 0, paddingRight: 8, width: 20, height: 20)
         postTypeLabel.anchor(top: nameLabel.bottomAnchor, left: profileImageView.rightAnchor, bottom: nil, right: nil, paddingTop: 2, paddingLeft: 10, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
-        bodyTextLabel.anchor(top: profileImageView.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 11, paddingLeft: 15, paddingBottom: 0, paddingRight: 15, width: 0, height: 0)
+        bodyTextLabel.anchor(top: nil, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 11, paddingLeft: 15, paddingBottom: 0, paddingRight: 15, width: 0, height: 0)
         likesTotalLabel.anchor(top: nil, left: leftAnchor, bottom: bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 15, paddingBottom: 11, paddingRight: 0, width: 0, height: 0)
         seperatorView.anchor(top: nil, left: leftAnchor, bottom: likesTotalLabel.topAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 15, paddingBottom: 10, paddingRight: 15, width: 0, height: 1)
         likeButton.anchor(top: nil, left: leftAnchor, bottom: seperatorView.topAnchor, right: nil, paddingTop: 0, paddingLeft: 20, paddingBottom: 18, paddingRight: 0, width: 0, height: 0)
