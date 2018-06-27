@@ -22,7 +22,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     fileprivate func setupViewControllers() {
         
         // Setting up the tab bar
-        let feedViewController = navigationControllerWith(rootViewController: FeedViewController(), unselectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), selectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), title: "Feed")
+        let feedViewController = navigationControllerWith(rootViewController: FeedViewController(collectionViewLayout: UICollectionViewFlowLayout()), unselectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), selectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), title: "Feed")
         let directoryViewController = navigationControllerWith(rootViewController: DirectoryViewController(), unselectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), selectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), title: "Directory")
         let profileViewController = navigationControllerWith(rootViewController: ProfileViewController(), unselectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), selectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), title: "Profile")
         let settingsViewController = navigationControllerWith(rootViewController: SettingsViewController(), unselectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), selectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), title: "Settings")
