@@ -10,6 +10,7 @@
 		0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173E87D20E18C6D00508EC2 /* AppDelegate.swift */; };
 		0173E88520E18C6F00508EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0173E88420E18C6F00508EC2 /* Assets.xcassets */; };
 		0173E88820E18C6F00508EC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0173E88620E18C6F00508EC2 /* LaunchScreen.storyboard */; };
+		81270A5620E2B03F005F7152 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81270A5520E2B03F005F7152 /* FeedCollectionViewCell.swift */; };
 		813E2FE820E18EE300D10BF9 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FE720E18EE300D10BF9 /* MainTabBarController.swift */; };
 		813E2FEB20E1912C00D10BF9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FEA20E1912C00D10BF9 /* FeedViewController.swift */; };
 		813E2FEE20E1913B00D10BF9 /* DirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FED20E1913B00D10BF9 /* DirectoryViewController.swift */; };
@@ -25,6 +26,7 @@
 		0173E88420E18C6F00508EC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0173E88720E18C6F00508EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0173E88920E18C6F00508EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81270A5520E2B03F005F7152 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		813E2FE720E18EE300D10BF9 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		813E2FEA20E1912C00D10BF9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		813E2FED20E1913B00D10BF9 /* DirectoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryViewController.swift; sourceTree = "<group>"; };
@@ -65,10 +67,35 @@
 			isa = PBXGroup;
 			children = (
 				0173E87D20E18C6D00508EC2 /* AppDelegate.swift */,
+				81270A5320E2AB05005F7152 /* Models */,
+				81270A5420E2AB17005F7152 /* ModelControllers */,
+				81270A5220E2AAFA005F7152 /* Views */,
 				813E2FE920E18EE700D10BF9 /* ViewControllers */,
 				813E2FE620E18E9600D10BF9 /* Resources */,
 			);
 			path = BadgingTracker;
+			sourceTree = "<group>";
+		};
+		81270A5220E2AAFA005F7152 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				81270A5520E2B03F005F7152 /* FeedCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		81270A5320E2AB05005F7152 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		81270A5420E2AB17005F7152 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 		813E2FE620E18E9600D10BF9 /* Resources */ = {
@@ -86,44 +113,12 @@
 			isa = PBXGroup;
 			children = (
 				813E2FE720E18EE300D10BF9 /* MainTabBarController.swift */,
-				813E2FEC20E1912F00D10BF9 /* FeedTab */,
-				813E2FEF20E1914200D10BF9 /* DirectoryTab */,
-				813E2FF220E1916400D10BF9 /* ProfileTab */,
-				813E2FF520E1917C00D10BF9 /* SettingsTab */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		813E2FEC20E1912F00D10BF9 /* FeedTab */ = {
-			isa = PBXGroup;
-			children = (
 				813E2FEA20E1912C00D10BF9 /* FeedViewController.swift */,
-			);
-			path = FeedTab;
-			sourceTree = "<group>";
-		};
-		813E2FEF20E1914200D10BF9 /* DirectoryTab */ = {
-			isa = PBXGroup;
-			children = (
 				813E2FED20E1913B00D10BF9 /* DirectoryViewController.swift */,
-			);
-			path = DirectoryTab;
-			sourceTree = "<group>";
-		};
-		813E2FF220E1916400D10BF9 /* ProfileTab */ = {
-			isa = PBXGroup;
-			children = (
 				813E2FF020E1915D00D10BF9 /* ProfileViewController.swift */,
-			);
-			path = ProfileTab;
-			sourceTree = "<group>";
-		};
-		813E2FF520E1917C00D10BF9 /* SettingsTab */ = {
-			isa = PBXGroup;
-			children = (
 				813E2FF620E1919100D10BF9 /* SettingsViewController.swift */,
 			);
-			path = SettingsTab;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		813E2FFA20E195F800D10BF9 /* Extensions */ = {
@@ -210,6 +205,7 @@
 				813E2FE820E18EE300D10BF9 /* MainTabBarController.swift in Sources */,
 				813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */,
 				813E2FF120E1915D00D10BF9 /* ProfileViewController.swift in Sources */,
+				81270A5620E2B03F005F7152 /* FeedCollectionViewCell.swift in Sources */,
 				813E2FEB20E1912C00D10BF9 /* FeedViewController.swift in Sources */,
 				0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */,
 				813E2FF720E1919100D10BF9 /* SettingsViewController.swift in Sources */,
@@ -349,6 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94C4Q5DME5;
 				INFOPLIST_FILE = "$(SRCROOT)/BadgingTracker/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -366,6 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94C4Q5DME5;
 				INFOPLIST_FILE = "$(SRCROOT)/BadgingTracker/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
