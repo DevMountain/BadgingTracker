@@ -18,7 +18,7 @@
 		813E2FF720E1919100D10BF9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FF620E1919100D10BF9 /* SettingsViewController.swift */; };
 		813E2FF920E195F400D10BF9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */; };
 		813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */; };
-<<<<<<< HEAD
+
 		B093725720E3F68F00F9D9FE /* KEMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093725620E3F68F00F9D9FE /* KEMentor.swift */; };
 		B093725920E3F6BD00F9D9FE /* KELeadIntructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093725820E3F6BD00F9D9FE /* KELeadIntructor.swift */; };
 		B093725B20E4065200F9D9FE /* KEAssessementDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093725A20E4065200F9D9FE /* KEAssessementDescription.swift */; };
@@ -28,13 +28,13 @@
 		B093726320E4A60500F9D9FE /* KERequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093726220E4A60500F9D9FE /* KERequirement.swift */; };
 		B0A81EE720E345720003BCC5 /* KEStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A81EE620E345720003BCC5 /* KEStudent.swift */; };
 		B0A81EE920E3F5390003BCC5 /* KEClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A81EE820E3F5390003BCC5 /* KEClass.swift */; };
-=======
+
 		8186C61520E4293500B4DD24 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C5F720E4293500B4DD24 /* SF-Pro-Text-Regular.otf */; };
 		8186C61620E4293500B4DD24 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C5F820E4293500B4DD24 /* SF-Pro-Text-Bold.otf */; };
 		8186C62020E4293500B4DD24 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C60220E4293500B4DD24 /* SF-Pro-Text-Semibold.otf */; };
 		8186C62420E4293500B4DD24 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C60620E4293500B4DD24 /* SF-Pro-Text-Medium.otf */; };
 		8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */; };
->>>>>>> cc9e0a17c80b5c94ba7fd50a240a4e2c7b67eab3
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +51,7 @@
 		813E2FF620E1919100D10BF9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-<<<<<<< HEAD
+
 		B093725620E3F68F00F9D9FE /* KEMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEMentor.swift; sourceTree = "<group>"; };
 		B093725820E3F6BD00F9D9FE /* KELeadIntructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KELeadIntructor.swift; sourceTree = "<group>"; };
 		B093725A20E4065200F9D9FE /* KEAssessementDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEAssessementDescription.swift; sourceTree = "<group>"; };
@@ -61,13 +61,13 @@
 		B093726220E4A60500F9D9FE /* KERequirement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KERequirement.swift; sourceTree = "<group>"; };
 		B0A81EE620E345720003BCC5 /* KEStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEStudent.swift; sourceTree = "<group>"; };
 		B0A81EE820E3F5390003BCC5 /* KEClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEClass.swift; sourceTree = "<group>"; };
-=======
+
 		8186C5F720E4293500B4DD24 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		8186C5F820E4293500B4DD24 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		8186C60220E4293500B4DD24 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		8186C60620E4293500B4DD24 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
->>>>>>> cc9e0a17c80b5c94ba7fd50a240a4e2c7b67eab3
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,12 +275,12 @@
 				B093726120E4A5D400F9D9FE /* KEAssesment.swift in Sources */,
 				B0A81EE720E345720003BCC5 /* KEStudent.swift in Sources */,
 				0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */,
-<<<<<<< HEAD
+
 				B093725D20E4820000F9D9FE /* KERequirementDescription.swift in Sources */,
 				B0A81EE920E3F5390003BCC5 /* KEClass.swift in Sources */,
-=======
+
 				8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */,
->>>>>>> cc9e0a17c80b5c94ba7fd50a240a4e2c7b67eab3
+
 				813E2FF720E1919100D10BF9 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
