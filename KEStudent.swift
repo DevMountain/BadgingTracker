@@ -44,7 +44,7 @@ class KEStudent {
     var isInstructor : Bool = false
     var userUuid : UUID
 
-    init(name: String, profilePhoto: String, title: String,contactLink: [String] = [String](),studentDescription: String,currentLocation: String,isPrivate: Bool = false,graduationDate: Date = Date(),email: String = String(), phone:Int = Int(),previousClass : [String] = [String](),currentClass : [String] = [String](),isMentor : Bool = false,isInstructor : Bool = false,userUuid: UUID = UUID()) {
+    init(name: String, profilePhoto: String, title: String,contactLink: [String] = [String](),studentDescription: String,currentLocation: String,isPrivate: Bool = false,graduationDate: Date = Date(),email: String = String(), phone:Int = Int(),previousClass : [String] = [String](),currentClass : [String] = [String](),userUuid: UUID = UUID()) {
         //MentorUUID, leadInstructorUUID ???
         self.name = name
         self.profilePhoto = profilePhoto
@@ -58,8 +58,6 @@ class KEStudent {
         self.phone = phone
         self.previousClass = previousClass
         self.currentClass = currentClass
-        self.isMentor = isMentor
-        self.isInstructor = isInstructor
         self.userUuid = userUuid
        
     }
