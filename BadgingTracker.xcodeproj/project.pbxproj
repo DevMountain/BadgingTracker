@@ -10,6 +10,7 @@
 		0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173E87D20E18C6D00508EC2 /* AppDelegate.swift */; };
 		0173E88520E18C6F00508EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0173E88420E18C6F00508EC2 /* Assets.xcassets */; };
 		0173E88820E18C6F00508EC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0173E88620E18C6F00508EC2 /* LaunchScreen.storyboard */; };
+		5E3B5C3F20E6DE920027A2D2 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3B5C3E20E6DE920027A2D2 /* Array+Extensions.swift */; };
 		5E3C9C1620E559100098CD3C /* CRStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C1520E559100098CD3C /* CRStudent.swift */; };
 		5E3C9C1820E559200098CD3C /* CRClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C1720E559200098CD3C /* CRClass.swift */; };
 		5E3C9C1A20E5592F0098CD3C /* CRPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C1920E5592F0098CD3C /* CRPost.swift */; };
@@ -49,6 +50,7 @@
 		0173E88420E18C6F00508EC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0173E88720E18C6F00508EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0173E88920E18C6F00508EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E3B5C3E20E6DE920027A2D2 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		5E3C9C1520E559100098CD3C /* CRStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRStudent.swift; sourceTree = "<group>"; };
 		5E3C9C1720E559200098CD3C /* CRClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRClass.swift; sourceTree = "<group>"; };
 		5E3C9C1920E5592F0098CD3C /* CRPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRPost.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */,
 				813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */,
 				8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */,
+				5E3B5C3E20E6DE920027A2D2 /* Array+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			files = (
 				5E3C9C2220E5596E0098CD3C /* CRRequirement.swift in Sources */,
 				B093725920E3F6BD00F9D9FE /* KELeadIntructor.swift in Sources */,
+				5E3B5C3F20E6DE920027A2D2 /* Array+Extensions.swift in Sources */,
 				5E3C9C1820E559200098CD3C /* CRClass.swift in Sources */,
 				B093725F20E4825700F9D9FE /* KEPosts.swift in Sources */,
 				813E2FF920E195F400D10BF9 /* UIView+Extensions.swift in Sources */,

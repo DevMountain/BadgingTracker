@@ -23,7 +23,7 @@ class CRStudent {
         static let photoKey: String = "photo"
         static let linksKey: String = "links"
         static let isPrivateKey: String = "isPrivate"
-        static let currentClassKey: String = "currentClass"
+        static let currentClassesKey: String = "currentClasses"
         static let previousClassesKey: String = "previousClasses"
     }
     
@@ -37,7 +37,7 @@ class CRStudent {
     var photo: URL?
     var links: [URL]?
     var isPrivate: Bool = false
-    var currentClass: CRClass?
+    var currentClasses: [CRClass]?
     var previousClasses: [CRClass]?
     var uuid: UUID
     var id: StudentID {
@@ -60,11 +60,11 @@ class CRStudent {
         if let links = self.links {
             dictionary[Constants.linksKey] = links.compactMap { $0.absoluteString }
         }
-        if let currentClass = self.currentClass {
-            dictionary[Constants.currentClassKey] = currentClass.id
+        if let currentClasses = self.currentClasses {
+            dictionary[Constants.currentClassesKey] = currentClasses.compactMap { $0.id }.toDictionary(withDefaultValue: true)
         }
         if let previousClasses = self.previousClasses {
-            dictionary[Constants.previousClassesKey] = previousClasses.compactMap { $0.id }
+            dictionary[Constants.previousClassesKey] = previousClasses.compactMap { $0.id }.toDictionary(withDefaultValue: true)
         }
         return dictionary
     }
@@ -72,7 +72,7 @@ class CRStudent {
         return try? JSONSerialization.data(withJSONObject: dictionaryRepresentation, options: .prettyPrinted)
     }
     
-    init(name: String, title: String, description: String, phone: String, email: String, location: String, photo: URL?, links: [URL]?, graduationDate: Date = Date(), currentClass: CRClass?, previousClasses: [CRClass]?, uuid: UUID = UUID()) {
+    init(name: String, title: String, description: String, phone: String, email: String, location: String, photo: URL?, links: [URL]?, graduationDate: Date = Date(), currentClasses: [CRClass]?, previousClasses: [CRClass]?, uuid: UUID = UUID()) {
         self.name = name
         self.title = title
         self.description = description
@@ -82,7 +82,7 @@ class CRStudent {
         self.graduationDate = graduationDate
         self.photo = photo
         self.links = links
-        self.currentClass = currentClass
+        self.currentClasses = currentClasses
         self.previousClasses = previousClasses
         self.uuid = uuid
     }
@@ -115,11 +115,11 @@ class CRStudent {
         if let linksArray = jsonDictionary[Constants.linksKey] as? [String] {
             self.links = linksArray.compactMap { URL(string: $0) }
         }
-        if let currentClassUUID = jsonDictionary[Constants.currentClassKey] as? String {
+        if let currentClassUUIDs = jsonDictionary[Constants.currentClassesKey] as? [String:Bool] {
             //      Get the current class from the database using this current class.
             //            self.currentClass = currentClass
         }
-        if let previousClassUUIDs = jsonDictionary[Constants.previousClassesKey] as? [String] {
+        if let previousClassUUIDs = jsonDictionary[Constants.previousClassesKey] as? [String:Bool] {
             //      Get the previous classes from the database using this current class.
             //            self.previousClasses = previousClasses
         }
