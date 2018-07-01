@@ -22,4 +22,9 @@ class KERequirement {
         self.maxScore = maxScore
         self.score = score
     }
+    
+//    init?(dictionaty: [String: Any]) {
+//        
+//    
+//    }
 }

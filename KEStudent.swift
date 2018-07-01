@@ -66,18 +66,18 @@ class KEStudent {
               let photo = jsonDictionary[Constants.profilePhotoKey] as? String,
               let title = jsonDictionary[Constants.contactLinkKey] as? String,
               let contactLink = jsonDictionary[Constants.contactLinkKey] as? String,
-              let studentDescription = jsonDictionary[Constants.studentDescriptionKey] as? String,
               let currentLocation = jsonDictionary[Constants.currentLocationKey] as? String,
               let isPrivate = jsonDictionary[Constants.isPrivateKey] as? Bool,
               let graduationDate  = jsonDictionary[Constants.graduationDate] as? Date,
               let email = jsonDictionary[Constants.emailKey] as? String,
-              let phone = jsonDictionary[Constants.phoneKey] as? Int,
-              let previousClass = jsonDictionary[Constants.previousClassKey] as? String,
               let currentClass = jsonDictionary[Constants.currentClassKey] as? String,
               let isMentor = jsonDictionary[Constants.isMentorKey] as? Bool,
               let isInstructor = jsonDictionary[Constants.isInstructorKey] as? Bool,
               let userUUID  = UUID(uuidString: userUuid)
-            else {return nil }
+              else {return nil }
+              let phone = jsonDictionary[Constants.phoneKey] as? Int ?? 0
+              let previousClass = jsonDictionary[Constants.previousClassKey] as? String ?? ""
+              let studentDescription = jsonDictionary[Constants.studentDescriptionKey] as? String ?? ""
         
         self.name = name
         self.profilePhoto = photo
