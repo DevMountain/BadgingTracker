@@ -10,16 +10,6 @@
 		0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173E87D20E18C6D00508EC2 /* AppDelegate.swift */; };
 		0173E88520E18C6F00508EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0173E88420E18C6F00508EC2 /* Assets.xcassets */; };
 		0173E88820E18C6F00508EC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0173E88620E18C6F00508EC2 /* LaunchScreen.storyboard */; };
-		5E3B5C3F20E6DE920027A2D2 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3B5C3E20E6DE920027A2D2 /* Array+Extensions.swift */; };
-		5E3C9C1620E559100098CD3C /* CRStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C1520E559100098CD3C /* CRStudent.swift */; };
-		5E3C9C1820E559200098CD3C /* CRClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C1720E559200098CD3C /* CRClass.swift */; };
-		5E3C9C1A20E5592F0098CD3C /* CRPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C1920E5592F0098CD3C /* CRPost.swift */; };
-		5E3C9C1C20E559440098CD3C /* CRAssessmentDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C1B20E559440098CD3C /* CRAssessmentDescription.swift */; };
-		5E3C9C1E20E559510098CD3C /* CRAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C1D20E559510098CD3C /* CRAssessment.swift */; };
-		5E3C9C2020E559620098CD3C /* CRRequirementDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C1F20E559620098CD3C /* CRRequirementDescription.swift */; };
-		5E3C9C2220E5596E0098CD3C /* CRRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C2120E5596E0098CD3C /* CRRequirement.swift */; };
-		5E3C9C2420E559910098CD3C /* CRMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C2320E559910098CD3C /* CRMentor.swift */; };
-		5E3C9C2620E5599E0098CD3C /* CRInstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C2520E5599E0098CD3C /* CRInstructor.swift */; };
 		81270A5620E2B03F005F7152 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81270A5520E2B03F005F7152 /* FeedCollectionViewCell.swift */; };
 		813E2FE820E18EE300D10BF9 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FE720E18EE300D10BF9 /* MainTabBarController.swift */; };
 		813E2FEB20E1912C00D10BF9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FEA20E1912C00D10BF9 /* FeedViewController.swift */; };
@@ -53,16 +43,6 @@
 		0173E88420E18C6F00508EC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0173E88720E18C6F00508EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0173E88920E18C6F00508EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E3B5C3E20E6DE920027A2D2 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
-		5E3C9C1520E559100098CD3C /* CRStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRStudent.swift; sourceTree = "<group>"; };
-		5E3C9C1720E559200098CD3C /* CRClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRClass.swift; sourceTree = "<group>"; };
-		5E3C9C1920E5592F0098CD3C /* CRPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRPost.swift; sourceTree = "<group>"; };
-		5E3C9C1B20E559440098CD3C /* CRAssessmentDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAssessmentDescription.swift; sourceTree = "<group>"; };
-		5E3C9C1D20E559510098CD3C /* CRAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAssessment.swift; sourceTree = "<group>"; };
-		5E3C9C1F20E559620098CD3C /* CRRequirementDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRRequirementDescription.swift; sourceTree = "<group>"; };
-		5E3C9C2120E5596E0098CD3C /* CRRequirement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRRequirement.swift; sourceTree = "<group>"; };
-		5E3C9C2320E559910098CD3C /* CRMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMentor.swift; sourceTree = "<group>"; };
-		5E3C9C2520E5599E0098CD3C /* CRInstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRInstructor.swift; sourceTree = "<group>"; };
 		81270A5520E2B03F005F7152 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		813E2FE720E18EE300D10BF9 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		813E2FEA20E1912C00D10BF9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -121,7 +101,6 @@
 		0173E87C20E18C6D00508EC2 /* BadgingTracker */ = {
 			isa = PBXGroup;
 			children = (
-				5E3C9C1420E558F90098CD3C /* CRModels */,
 				0173E87D20E18C6D00508EC2 /* AppDelegate.swift */,
 				B05CCDC020E6F88800AC6D3B /* KEViews */,
 				81270A5320E2AB05005F7152 /* Models */,
@@ -131,22 +110,6 @@
 				813E2FE620E18E9600D10BF9 /* Resources */,
 			);
 			path = BadgingTracker;
-			sourceTree = "<group>";
-		};
-		5E3C9C1420E558F90098CD3C /* CRModels */ = {
-			isa = PBXGroup;
-			children = (
-				5E3C9C1520E559100098CD3C /* CRStudent.swift */,
-				5E3C9C2320E559910098CD3C /* CRMentor.swift */,
-				5E3C9C2520E5599E0098CD3C /* CRInstructor.swift */,
-				5E3C9C1720E559200098CD3C /* CRClass.swift */,
-				5E3C9C1B20E559440098CD3C /* CRAssessmentDescription.swift */,
-				5E3C9C1D20E559510098CD3C /* CRAssessment.swift */,
-				5E3C9C1F20E559620098CD3C /* CRRequirementDescription.swift */,
-				5E3C9C2120E5596E0098CD3C /* CRRequirement.swift */,
-				5E3C9C1920E5592F0098CD3C /* CRPost.swift */,
-			);
-			path = CRModels;
 			sourceTree = "<group>";
 		};
 		81270A5220E2AAFA005F7152 /* Views */ = {
@@ -201,7 +164,6 @@
 				813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */,
 				813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */,
 				8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */,
-				5E3B5C3E20E6DE920027A2D2 /* Array+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -318,34 +280,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E3C9C2220E5596E0098CD3C /* CRRequirement.swift in Sources */,
 				B093725920E3F6BD00F9D9FE /* KELeadIntructor.swift in Sources */,
-				5E3B5C3F20E6DE920027A2D2 /* Array+Extensions.swift in Sources */,
-				5E3C9C1820E559200098CD3C /* CRClass.swift in Sources */,
 				B093725F20E4825700F9D9FE /* KEPosts.swift in Sources */,
 				813E2FF920E195F400D10BF9 /* UIView+Extensions.swift in Sources */,
-				5E3C9C1A20E5592F0098CD3C /* CRPost.swift in Sources */,
 				813E2FEE20E1913B00D10BF9 /* DirectoryViewController.swift in Sources */,
 				B093725720E3F68F00F9D9FE /* KEMentor.swift in Sources */,
 				B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */,
-				5E3C9C1C20E559440098CD3C /* CRAssessmentDescription.swift in Sources */,
 				B093725B20E4065200F9D9FE /* KEAssessementDescription.swift in Sources */,
-				5E3C9C2020E559620098CD3C /* CRRequirementDescription.swift in Sources */,
-				5E3C9C1620E559100098CD3C /* CRStudent.swift in Sources */,
 				813E2FE820E18EE300D10BF9 /* MainTabBarController.swift in Sources */,
 				813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */,
 				B046CC2220E818A3003C143E /* SignUpPageViewController.swift in Sources */,
 				B05CCDC220E6F8CB00AC6D3B /* LogInViewController.swift in Sources */,
 				813E2FF120E1915D00D10BF9 /* ProfileViewController.swift in Sources */,
-				5E3C9C2420E559910098CD3C /* CRMentor.swift in Sources */,
 				B093726320E4A60500F9D9FE /* KERequirement.swift in Sources */,
 				81270A5620E2B03F005F7152 /* FeedCollectionViewCell.swift in Sources */,
 				813E2FEB20E1912C00D10BF9 /* FeedViewController.swift in Sources */,
-				5E3C9C1E20E559510098CD3C /* CRAssessment.swift in Sources */,
 				B093726120E4A5D400F9D9FE /* KEAssesment.swift in Sources */,
 				B0A81EE720E345720003BCC5 /* KEStudent.swift in Sources */,
 				0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */,
-				5E3C9C2620E5599E0098CD3C /* CRInstructor.swift in Sources */,
 				B093725D20E4820000F9D9FE /* KERequirementDescription.swift in Sources */,
 				B0A81EE920E3F5390003BCC5 /* KEClass.swift in Sources */,
 				8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */,

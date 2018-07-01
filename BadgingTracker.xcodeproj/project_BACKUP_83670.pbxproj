@@ -10,16 +10,6 @@
 		0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173E87D20E18C6D00508EC2 /* AppDelegate.swift */; };
 		0173E88520E18C6F00508EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0173E88420E18C6F00508EC2 /* Assets.xcassets */; };
 		0173E88820E18C6F00508EC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0173E88620E18C6F00508EC2 /* LaunchScreen.storyboard */; };
-		5E3B5C3F20E6DE920027A2D2 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3B5C3E20E6DE920027A2D2 /* Array+Extensions.swift */; };
-		5E3C9C1620E559100098CD3C /* CRStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C1520E559100098CD3C /* CRStudent.swift */; };
-		5E3C9C1820E559200098CD3C /* CRClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C1720E559200098CD3C /* CRClass.swift */; };
-		5E3C9C1A20E5592F0098CD3C /* CRPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C1920E5592F0098CD3C /* CRPost.swift */; };
-		5E3C9C1C20E559440098CD3C /* CRAssessmentDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C1B20E559440098CD3C /* CRAssessmentDescription.swift */; };
-		5E3C9C1E20E559510098CD3C /* CRAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C1D20E559510098CD3C /* CRAssessment.swift */; };
-		5E3C9C2020E559620098CD3C /* CRRequirementDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C1F20E559620098CD3C /* CRRequirementDescription.swift */; };
-		5E3C9C2220E5596E0098CD3C /* CRRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C2120E5596E0098CD3C /* CRRequirement.swift */; };
-		5E3C9C2420E559910098CD3C /* CRMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C2320E559910098CD3C /* CRMentor.swift */; };
-		5E3C9C2620E5599E0098CD3C /* CRInstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9C2520E5599E0098CD3C /* CRInstructor.swift */; };
 		81270A5620E2B03F005F7152 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81270A5520E2B03F005F7152 /* FeedCollectionViewCell.swift */; };
 		813E2FE820E18EE300D10BF9 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FE720E18EE300D10BF9 /* MainTabBarController.swift */; };
 		813E2FEB20E1912C00D10BF9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FEA20E1912C00D10BF9 /* FeedViewController.swift */; };
@@ -28,23 +18,15 @@
 		813E2FF720E1919100D10BF9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FF620E1919100D10BF9 /* SettingsViewController.swift */; };
 		813E2FF920E195F400D10BF9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */; };
 		813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */; };
+<<<<<<< HEAD
+		B0A81EE220E339280003BCC5 /* KEDStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A81EE120E339280003BCC5 /* KEDStudent.swift */; };
+=======
 		8186C61520E4293500B4DD24 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C5F720E4293500B4DD24 /* SF-Pro-Text-Regular.otf */; };
 		8186C61620E4293500B4DD24 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C5F820E4293500B4DD24 /* SF-Pro-Text-Bold.otf */; };
 		8186C62020E4293500B4DD24 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C60220E4293500B4DD24 /* SF-Pro-Text-Semibold.otf */; };
 		8186C62420E4293500B4DD24 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C60620E4293500B4DD24 /* SF-Pro-Text-Medium.otf */; };
 		8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */; };
-		B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC1F20E72406003C143E /* LogInPageViewController.swift */; };
-		B046CC2220E818A3003C143E /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC2120E818A3003C143E /* SignUpPageViewController.swift */; };
-		B05CCDC220E6F8CB00AC6D3B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05CCDC120E6F8CB00AC6D3B /* LogInViewController.swift */; };
-		B093725720E3F68F00F9D9FE /* KEMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093725620E3F68F00F9D9FE /* KEMentor.swift */; };
-		B093725920E3F6BD00F9D9FE /* KELeadIntructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093725820E3F6BD00F9D9FE /* KELeadIntructor.swift */; };
-		B093725B20E4065200F9D9FE /* KEAssessementDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093725A20E4065200F9D9FE /* KEAssessementDescription.swift */; };
-		B093725D20E4820000F9D9FE /* KERequirementDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093725C20E4820000F9D9FE /* KERequirementDescription.swift */; };
-		B093725F20E4825700F9D9FE /* KEPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093725E20E4825700F9D9FE /* KEPosts.swift */; };
-		B093726120E4A5D400F9D9FE /* KEAssesment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093726020E4A5D400F9D9FE /* KEAssesment.swift */; };
-		B093726320E4A60500F9D9FE /* KERequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093726220E4A60500F9D9FE /* KERequirement.swift */; };
-		B0A81EE720E345720003BCC5 /* KEStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A81EE620E345720003BCC5 /* KEStudent.swift */; };
-		B0A81EE920E3F5390003BCC5 /* KEClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A81EE820E3F5390003BCC5 /* KEClass.swift */; };
+>>>>>>> cc9e0a17c80b5c94ba7fd50a240a4e2c7b67eab3
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,16 +35,6 @@
 		0173E88420E18C6F00508EC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0173E88720E18C6F00508EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0173E88920E18C6F00508EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E3B5C3E20E6DE920027A2D2 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
-		5E3C9C1520E559100098CD3C /* CRStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRStudent.swift; sourceTree = "<group>"; };
-		5E3C9C1720E559200098CD3C /* CRClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRClass.swift; sourceTree = "<group>"; };
-		5E3C9C1920E5592F0098CD3C /* CRPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRPost.swift; sourceTree = "<group>"; };
-		5E3C9C1B20E559440098CD3C /* CRAssessmentDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAssessmentDescription.swift; sourceTree = "<group>"; };
-		5E3C9C1D20E559510098CD3C /* CRAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAssessment.swift; sourceTree = "<group>"; };
-		5E3C9C1F20E559620098CD3C /* CRRequirementDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRRequirementDescription.swift; sourceTree = "<group>"; };
-		5E3C9C2120E5596E0098CD3C /* CRRequirement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRRequirement.swift; sourceTree = "<group>"; };
-		5E3C9C2320E559910098CD3C /* CRMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMentor.swift; sourceTree = "<group>"; };
-		5E3C9C2520E5599E0098CD3C /* CRInstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRInstructor.swift; sourceTree = "<group>"; };
 		81270A5520E2B03F005F7152 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		813E2FE720E18EE300D10BF9 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		813E2FEA20E1912C00D10BF9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -71,23 +43,15 @@
 		813E2FF620E1919100D10BF9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		B0A81EE120E339280003BCC5 /* KEDStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEDStudent.swift; sourceTree = "<group>"; };
+=======
 		8186C5F720E4293500B4DD24 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		8186C5F820E4293500B4DD24 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		8186C60220E4293500B4DD24 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		8186C60620E4293500B4DD24 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
-		B046CC1F20E72406003C143E /* LogInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInPageViewController.swift; path = BadgingTracker/KEViews/LogInPageViewController.swift; sourceTree = SOURCE_ROOT; };
-		B046CC2120E818A3003C143E /* SignUpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpPageViewController.swift; path = BadgingTracker/KEViews/SignUpPageViewController.swift; sourceTree = SOURCE_ROOT; };
-		B05CCDC120E6F8CB00AC6D3B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = BadgingTracker/KEViews/LogInViewController.swift; sourceTree = SOURCE_ROOT; };
-		B093725620E3F68F00F9D9FE /* KEMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEMentor.swift; sourceTree = "<group>"; };
-		B093725820E3F6BD00F9D9FE /* KELeadIntructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KELeadIntructor.swift; sourceTree = "<group>"; };
-		B093725A20E4065200F9D9FE /* KEAssessementDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEAssessementDescription.swift; sourceTree = "<group>"; };
-		B093725C20E4820000F9D9FE /* KERequirementDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KERequirementDescription.swift; sourceTree = "<group>"; };
-		B093725E20E4825700F9D9FE /* KEPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEPosts.swift; sourceTree = "<group>"; };
-		B093726020E4A5D400F9D9FE /* KEAssesment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEAssesment.swift; sourceTree = "<group>"; };
-		B093726220E4A60500F9D9FE /* KERequirement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KERequirement.swift; sourceTree = "<group>"; };
-		B0A81EE620E345720003BCC5 /* KEStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEStudent.swift; sourceTree = "<group>"; };
-		B0A81EE820E3F5390003BCC5 /* KEClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEClass.swift; sourceTree = "<group>"; };
+>>>>>>> cc9e0a17c80b5c94ba7fd50a240a4e2c7b67eab3
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +68,10 @@
 		0173E87120E18C6D00508EC2 = {
 			isa = PBXGroup;
 			children = (
+				B0A81EE320E3392F0003BCC5 /* Models */,
+				B0A81EE120E339280003BCC5 /* KEDStudent.swift */,
 				0173E87C20E18C6D00508EC2 /* BadgingTracker */,
 				0173E87B20E18C6D00508EC2 /* Products */,
-				B09F154220E6F5CB00EE5D7B /* KEModels */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,9 +86,7 @@
 		0173E87C20E18C6D00508EC2 /* BadgingTracker */ = {
 			isa = PBXGroup;
 			children = (
-				5E3C9C1420E558F90098CD3C /* CRModels */,
 				0173E87D20E18C6D00508EC2 /* AppDelegate.swift */,
-				B05CCDC020E6F88800AC6D3B /* KEViews */,
 				81270A5320E2AB05005F7152 /* Models */,
 				81270A5420E2AB17005F7152 /* ModelControllers */,
 				81270A5220E2AAFA005F7152 /* Views */,
@@ -131,22 +94,6 @@
 				813E2FE620E18E9600D10BF9 /* Resources */,
 			);
 			path = BadgingTracker;
-			sourceTree = "<group>";
-		};
-		5E3C9C1420E558F90098CD3C /* CRModels */ = {
-			isa = PBXGroup;
-			children = (
-				5E3C9C1520E559100098CD3C /* CRStudent.swift */,
-				5E3C9C2320E559910098CD3C /* CRMentor.swift */,
-				5E3C9C2520E5599E0098CD3C /* CRInstructor.swift */,
-				5E3C9C1720E559200098CD3C /* CRClass.swift */,
-				5E3C9C1B20E559440098CD3C /* CRAssessmentDescription.swift */,
-				5E3C9C1D20E559510098CD3C /* CRAssessment.swift */,
-				5E3C9C1F20E559620098CD3C /* CRRequirementDescription.swift */,
-				5E3C9C2120E5596E0098CD3C /* CRRequirement.swift */,
-				5E3C9C1920E5592F0098CD3C /* CRPost.swift */,
-			);
-			path = CRModels;
 			sourceTree = "<group>";
 		};
 		81270A5220E2AAFA005F7152 /* Views */ = {
@@ -201,11 +148,17 @@
 				813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */,
 				813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */,
 				8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */,
-				5E3B5C3E20E6DE920027A2D2 /* Array+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+		B0A81EE320E3392F0003BCC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+=======
 		8186C5EA20E4293500B4DD24 /* SF Pro */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,33 +168,7 @@
 				8186C60620E4293500B4DD24 /* SF-Pro-Text-Medium.otf */,
 			);
 			path = "SF Pro";
-			sourceTree = "<group>";
-		};
-		B05CCDC020E6F88800AC6D3B /* KEViews */ = {
-			isa = PBXGroup;
-			children = (
-				B05CCDC120E6F8CB00AC6D3B /* LogInViewController.swift */,
-				B046CC1F20E72406003C143E /* LogInPageViewController.swift */,
-				B046CC2120E818A3003C143E /* SignUpPageViewController.swift */,
-			);
-			name = KEViews;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		B09F154220E6F5CB00EE5D7B /* KEModels */ = {
-			isa = PBXGroup;
-			children = (
-				B0A81EE820E3F5390003BCC5 /* KEClass.swift */,
-				B093725A20E4065200F9D9FE /* KEAssessementDescription.swift */,
-				B093725E20E4825700F9D9FE /* KEPosts.swift */,
-				B093726220E4A60500F9D9FE /* KERequirement.swift */,
-				B093725C20E4820000F9D9FE /* KERequirementDescription.swift */,
-				B093726020E4A5D400F9D9FE /* KEAssesment.swift */,
-				B093725820E3F6BD00F9D9FE /* KELeadIntructor.swift */,
-				B093725620E3F68F00F9D9FE /* KEMentor.swift */,
-				B0A81EE620E345720003BCC5 /* KEStudent.swift */,
-			);
-			name = KEModels;
+>>>>>>> cc9e0a17c80b5c94ba7fd50a240a4e2c7b67eab3
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,36 +245,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E3C9C2220E5596E0098CD3C /* CRRequirement.swift in Sources */,
-				B093725920E3F6BD00F9D9FE /* KELeadIntructor.swift in Sources */,
-				5E3B5C3F20E6DE920027A2D2 /* Array+Extensions.swift in Sources */,
-				5E3C9C1820E559200098CD3C /* CRClass.swift in Sources */,
-				B093725F20E4825700F9D9FE /* KEPosts.swift in Sources */,
 				813E2FF920E195F400D10BF9 /* UIView+Extensions.swift in Sources */,
-				5E3C9C1A20E5592F0098CD3C /* CRPost.swift in Sources */,
 				813E2FEE20E1913B00D10BF9 /* DirectoryViewController.swift in Sources */,
-				B093725720E3F68F00F9D9FE /* KEMentor.swift in Sources */,
-				B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */,
-				5E3C9C1C20E559440098CD3C /* CRAssessmentDescription.swift in Sources */,
-				B093725B20E4065200F9D9FE /* KEAssessementDescription.swift in Sources */,
-				5E3C9C2020E559620098CD3C /* CRRequirementDescription.swift in Sources */,
-				5E3C9C1620E559100098CD3C /* CRStudent.swift in Sources */,
 				813E2FE820E18EE300D10BF9 /* MainTabBarController.swift in Sources */,
+				B0A81EE220E339280003BCC5 /* KEDStudent.swift in Sources */,
 				813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */,
-				B046CC2220E818A3003C143E /* SignUpPageViewController.swift in Sources */,
-				B05CCDC220E6F8CB00AC6D3B /* LogInViewController.swift in Sources */,
 				813E2FF120E1915D00D10BF9 /* ProfileViewController.swift in Sources */,
-				5E3C9C2420E559910098CD3C /* CRMentor.swift in Sources */,
-				B093726320E4A60500F9D9FE /* KERequirement.swift in Sources */,
 				81270A5620E2B03F005F7152 /* FeedCollectionViewCell.swift in Sources */,
 				813E2FEB20E1912C00D10BF9 /* FeedViewController.swift in Sources */,
-				5E3C9C1E20E559510098CD3C /* CRAssessment.swift in Sources */,
-				B093726120E4A5D400F9D9FE /* KEAssesment.swift in Sources */,
-				B0A81EE720E345720003BCC5 /* KEStudent.swift in Sources */,
 				0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */,
-				5E3C9C2620E5599E0098CD3C /* CRInstructor.swift in Sources */,
-				B093725D20E4820000F9D9FE /* KERequirementDescription.swift in Sources */,
-				B0A81EE920E3F5390003BCC5 /* KEClass.swift in Sources */,
 				8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */,
 				813E2FF720E1919100D10BF9 /* SettingsViewController.swift in Sources */,
 			);
@@ -486,7 +392,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
 				DEVELOPMENT_TEAM = S7CCUH8W47;
+=======
+				DEVELOPMENT_TEAM = 94C4Q5DME5;
+>>>>>>> 194eae47aff600f0ffc79cbdddb9fc97c28024ec
 				INFOPLIST_FILE = "$(SRCROOT)/BadgingTracker/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -504,7 +414,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
 				DEVELOPMENT_TEAM = S7CCUH8W47;
+=======
+				DEVELOPMENT_TEAM = 94C4Q5DME5;
+>>>>>>> 194eae47aff600f0ffc79cbdddb9fc97c28024ec
 				INFOPLIST_FILE = "$(SRCROOT)/BadgingTracker/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

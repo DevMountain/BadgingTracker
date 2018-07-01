@@ -33,9 +33,12 @@
 		8186C62020E4293500B4DD24 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C60220E4293500B4DD24 /* SF-Pro-Text-Semibold.otf */; };
 		8186C62420E4293500B4DD24 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C60620E4293500B4DD24 /* SF-Pro-Text-Medium.otf */; };
 		8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */; };
+<<<<<<< HEAD
 		B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC1F20E72406003C143E /* LogInPageViewController.swift */; };
 		B046CC2220E818A3003C143E /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC2120E818A3003C143E /* SignUpPageViewController.swift */; };
 		B05CCDC220E6F8CB00AC6D3B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05CCDC120E6F8CB00AC6D3B /* LogInViewController.swift */; };
+=======
+>>>>>>> b384dd0b5d65d18a7957e695a54e32400649ea9c
 		B093725720E3F68F00F9D9FE /* KEMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093725620E3F68F00F9D9FE /* KEMentor.swift */; };
 		B093725920E3F6BD00F9D9FE /* KELeadIntructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093725820E3F6BD00F9D9FE /* KELeadIntructor.swift */; };
 		B093725B20E4065200F9D9FE /* KEAssessementDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093725A20E4065200F9D9FE /* KEAssessementDescription.swift */; };
@@ -76,9 +79,12 @@
 		8186C60220E4293500B4DD24 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		8186C60620E4293500B4DD24 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		B046CC1F20E72406003C143E /* LogInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInPageViewController.swift; path = BadgingTracker/KEViews/LogInPageViewController.swift; sourceTree = SOURCE_ROOT; };
 		B046CC2120E818A3003C143E /* SignUpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpPageViewController.swift; path = BadgingTracker/KEViews/SignUpPageViewController.swift; sourceTree = SOURCE_ROOT; };
 		B05CCDC120E6F8CB00AC6D3B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = BadgingTracker/KEViews/LogInViewController.swift; sourceTree = SOURCE_ROOT; };
+=======
+>>>>>>> b384dd0b5d65d18a7957e695a54e32400649ea9c
 		B093725620E3F68F00F9D9FE /* KEMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEMentor.swift; sourceTree = "<group>"; };
 		B093725820E3F6BD00F9D9FE /* KELeadIntructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KELeadIntructor.swift; sourceTree = "<group>"; };
 		B093725A20E4065200F9D9FE /* KEAssessementDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEAssessementDescription.swift; sourceTree = "<group>"; };
@@ -327,8 +333,11 @@
 				5E3C9C1A20E5592F0098CD3C /* CRPost.swift in Sources */,
 				813E2FEE20E1913B00D10BF9 /* DirectoryViewController.swift in Sources */,
 				B093725720E3F68F00F9D9FE /* KEMentor.swift in Sources */,
+<<<<<<< HEAD
 				B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */,
+=======
 				5E3C9C1C20E559440098CD3C /* CRAssessmentDescription.swift in Sources */,
+>>>>>>> b384dd0b5d65d18a7957e695a54e32400649ea9c
 				B093725B20E4065200F9D9FE /* KEAssessementDescription.swift in Sources */,
 				5E3C9C2020E559620098CD3C /* CRRequirementDescription.swift in Sources */,
 				5E3C9C1620E559100098CD3C /* CRStudent.swift in Sources */,
@@ -345,7 +354,10 @@
 				B093726120E4A5D400F9D9FE /* KEAssesment.swift in Sources */,
 				B0A81EE720E345720003BCC5 /* KEStudent.swift in Sources */,
 				0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */,
+<<<<<<< HEAD
+=======
 				5E3C9C2620E5599E0098CD3C /* CRInstructor.swift in Sources */,
+>>>>>>> b384dd0b5d65d18a7957e695a54e32400649ea9c
 				B093725D20E4820000F9D9FE /* KERequirementDescription.swift in Sources */,
 				B0A81EE920E3F5390003BCC5 /* KEClass.swift in Sources */,
 				8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */,
