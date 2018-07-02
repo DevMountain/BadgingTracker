@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>782204200761-075hknrp9983glielme92763p8gf96sg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.782204200761-075hknrp9983glielme92763p8gf96sg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCiYnSeeaQD42xOGTvsY8_izCpMUErYaq0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>782204200761</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.wesstpeak.BadgingTracker</string>
+	<key>PROJECT_ID</key>
+	<string>badgingtracker-35e08</string>
+	<key>STORAGE_BUCKET</key>
+	<string>badgingtracker-35e08.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:782204200761:ios:e940d56a9166eb54</string>
+	<key>DATABASE_URL</key>
+	<string>https://badgingtracker-35e08.firebaseio.com</string>
+</dict>
+</plist>
