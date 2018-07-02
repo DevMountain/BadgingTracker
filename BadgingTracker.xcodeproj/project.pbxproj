@@ -35,6 +35,7 @@
 		8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */; };
 		B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC1F20E72406003C143E /* LogInPageViewController.swift */; };
 		B046CC2220E818A3003C143E /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC2120E818A3003C143E /* SignUpPageViewController.swift */; };
+		B04A1D9720EAEE6800AA9BC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B04A1D9620EAEE6800AA9BC2 /* GoogleService-Info.plist */; };
 		B05CCDC220E6F8CB00AC6D3B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05CCDC120E6F8CB00AC6D3B /* LogInViewController.swift */; };
 		B093725720E3F68F00F9D9FE /* KEMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093725620E3F68F00F9D9FE /* KEMentor.swift */; };
 		B093725920E3F6BD00F9D9FE /* KELeadIntructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093725820E3F6BD00F9D9FE /* KELeadIntructor.swift */; };
@@ -78,6 +79,7 @@
 		8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		B046CC1F20E72406003C143E /* LogInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInPageViewController.swift; path = BadgingTracker/KEViews/LogInPageViewController.swift; sourceTree = SOURCE_ROOT; };
 		B046CC2120E818A3003C143E /* SignUpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpPageViewController.swift; path = BadgingTracker/KEViews/SignUpPageViewController.swift; sourceTree = SOURCE_ROOT; };
+		B04A1D9620EAEE6800AA9BC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B05CCDC120E6F8CB00AC6D3B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = BadgingTracker/KEViews/LogInViewController.swift; sourceTree = SOURCE_ROOT; };
 		B093725620E3F68F00F9D9FE /* KEMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEMentor.swift; sourceTree = "<group>"; };
 		B093725820E3F6BD00F9D9FE /* KELeadIntructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KELeadIntructor.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				0173E88420E18C6F00508EC2 /* Assets.xcassets */,
 				0173E88620E18C6F00508EC2 /* LaunchScreen.storyboard */,
 				0173E88920E18C6F00508EC2 /* Info.plist */,
+				B04A1D9620EAEE6800AA9BC2 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				8186C62020E4293500B4DD24 /* SF-Pro-Text-Semibold.otf in Resources */,
 				8186C61520E4293500B4DD24 /* SF-Pro-Text-Regular.otf in Resources */,
 				0173E88520E18C6F00508EC2 /* Assets.xcassets in Resources */,
+				B04A1D9720EAEE6800AA9BC2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
