@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LogInPageViewController: UIViewController {
 
@@ -30,6 +31,7 @@ class LogInPageViewController: UIViewController {
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
         return button
     }()
     let forgotPasswordButton : UIButton = {
@@ -83,6 +85,25 @@ class LogInPageViewController: UIViewController {
         forgotPasswordButton.anchor(top: view.topAnchor, left: view.leftAnchor , bottom: nil, right: view.rightAnchor, paddingTop: 440, paddingLeft: 205, paddingBottom: 0, paddingRight: 56.8, width: 0, height: 18)
         logoImage.anchor(top: nil , left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 142, paddingBottom: 420, paddingRight: 142, width: 0, height: 0)
         
+    }
+    @objc func handleSignUp() {
+        guard let email = emailTextFiled.text, !email.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty else {
+                let alertController = UIAlertController(title: "Login Error", message: "Please make sure you provide your name, email address and password to complete the registration.", preferredStyle: .alert)
+                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(okayAction)
+                present(alertController, animated: true, completion: nil)
+                
+                return}
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            if let error = error {
+                let alertController = UIAlertController(title: "Resgistration Error", message: error.localizedDescription, preferredStyle: .alert)
+                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(okayAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+            self.view.endEditing(true)
+       }
     }
 }
 

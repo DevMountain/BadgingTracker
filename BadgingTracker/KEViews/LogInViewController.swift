@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LogInViewController: UIViewController {
 
@@ -43,6 +44,7 @@ class LogInViewController: UIViewController {
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(loginSegue), for: .touchUpInside)
         return button
     }()
     let orTextLabel: UILabel = {
@@ -87,4 +89,9 @@ class LogInViewController: UIViewController {
         orTextLabel.anchor(top: stackView.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0 , paddingBottom: 0, paddingRight: 0, width: 30, height: 18)
         descriptionTextView.anchor(top: login.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 140, paddingLeft: 50, paddingBottom: 0, paddingRight: 50, width: 0, height: 0)
     }
+ @objc func loginSegue(){
+    let page = LogInPageViewController()
+    present(page, animated: true, completion: nil)
+    }
+   
 }
