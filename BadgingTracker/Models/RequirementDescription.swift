@@ -1,14 +1,14 @@
 //
-//  CRRequirementDescription.swift
+//  RequirementDescription.swift
 //  BadgingTracker
 //
-//  Created by Christian Riboldi on 6/28/18.
+//  Created by Thao Doan on 6/27/18.
 //  Copyright © 2018 Nick Reichard. All rights reserved.
 //
 
 import Foundation
 
-class CRRequirementDescription {
+class RequirementDescription {
     
     struct Constants {
         static let titleKey: String = "title"
@@ -54,5 +54,9 @@ class CRRequirementDescription {
         self.maxScore = maxScore
         self.uuid = uuid
     }
-    
 }
+
+
+
+
+
