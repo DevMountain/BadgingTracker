@@ -29,11 +29,14 @@
 		813E2FF720E1919100D10BF9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FF620E1919100D10BF9 /* SettingsViewController.swift */; };
 		813E2FF920E195F400D10BF9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */; };
 		813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */; };
+		814D60EB20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D60EA20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift */; };
+		81628D7520EFF9A0007C2D0C /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81628D7420EFF9A0007C2D0C /* ProfileHeaderView.swift */; };
 		8186C61520E4293500B4DD24 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C5F720E4293500B4DD24 /* SF-Pro-Text-Regular.otf */; };
 		8186C61620E4293500B4DD24 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C5F820E4293500B4DD24 /* SF-Pro-Text-Bold.otf */; };
 		8186C62020E4293500B4DD24 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C60220E4293500B4DD24 /* SF-Pro-Text-Semibold.otf */; };
 		8186C62420E4293500B4DD24 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C60620E4293500B4DD24 /* SF-Pro-Text-Medium.otf */; };
 		8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */; };
+		81E896A520EED17A0001CC07 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E896A420EED17A0001CC07 /* SearchTableViewCell.swift */; };
 		B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC1F20E72406003C143E /* LogInPageViewController.swift */; };
 		B046CC2220E818A3003C143E /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC2120E818A3003C143E /* SignUpPageViewController.swift */; };
 		B04A1D9720EAEE6800AA9BC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B04A1D9620EAEE6800AA9BC2 /* GoogleService-Info.plist */; };
@@ -73,11 +76,14 @@
 		813E2FF620E1919100D10BF9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		814D60EA20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		81628D7420EFF9A0007C2D0C /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		8186C5F720E4293500B4DD24 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		8186C5F820E4293500B4DD24 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		8186C60220E4293500B4DD24 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		8186C60620E4293500B4DD24 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		81E896A420EED17A0001CC07 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		8CB9975726F16F0CC0825A6A /* Pods-BadgingTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadgingTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BadgingTracker/Pods-BadgingTracker.release.xcconfig"; sourceTree = "<group>"; };
 		8DF122F353158262E84DA189 /* Pods-BadgingTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadgingTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BadgingTracker/Pods-BadgingTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		A17A44DB92B6D7CE9C1BAE17 /* Pods_BadgingTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadgingTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +176,9 @@
 			isa = PBXGroup;
 			children = (
 				81270A5520E2B03F005F7152 /* FeedCollectionViewCell.swift */,
+				814D60EA20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift */,
+				81E896A420EED17A0001CC07 /* SearchTableViewCell.swift */,
+				81628D7420EFF9A0007C2D0C /* ProfileHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,8 +251,7 @@
 				B046CC1F20E72406003C143E /* LogInPageViewController.swift */,
 				B046CC2120E818A3003C143E /* SignUpPageViewController.swift */,
 			);
-			name = KEViews;
-			path = "New Group";
+			path = KEViews;
 			sourceTree = "<group>";
 		};
 		B09F154220E6F5CB00EE5D7B /* KEModels */ = {
@@ -283,6 +291,7 @@
 				0173E87720E18C6D00508EC2 /* Frameworks */,
 				0173E87820E18C6D00508EC2 /* Resources */,
 				3359384C3DC905E35E9E0167 /* [CP] Embed Pods Frameworks */,
+				53E194A0E55E9A16C0919E0A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -366,6 +375,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BadgingTracker/Pods-BadgingTracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		53E194A0E55E9A16C0919E0A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BadgingTracker/Pods-BadgingTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A47C9A992772FEF5AECAFAD4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,6 +430,7 @@
 				5E3C9C2020E559620098CD3C /* CRRequirementDescription.swift in Sources */,
 				5E3C9C1620E559100098CD3C /* CRStudent.swift in Sources */,
 				813E2FE820E18EE300D10BF9 /* MainTabBarController.swift in Sources */,
+				814D60EB20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift in Sources */,
 				813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */,
 				B046CC2220E818A3003C143E /* SignUpPageViewController.swift in Sources */,
 				B05CCDC220E6F8CB00AC6D3B /* LogInViewController.swift in Sources */,
@@ -417,10 +442,12 @@
 				5E3C9C1E20E559510098CD3C /* CRAssessment.swift in Sources */,
 				B093726120E4A5D400F9D9FE /* KEAssesment.swift in Sources */,
 				B0A81EE720E345720003BCC5 /* KEStudent.swift in Sources */,
+				81E896A520EED17A0001CC07 /* SearchTableViewCell.swift in Sources */,
 				0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */,
 				5E3C9C2620E5599E0098CD3C /* CRInstructor.swift in Sources */,
 				B093725D20E4820000F9D9FE /* KERequirementDescription.swift in Sources */,
 				B0A81EE920E3F5390003BCC5 /* KEClass.swift in Sources */,
+				81628D7520EFF9A0007C2D0C /* ProfileHeaderView.swift in Sources */,
 				8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */,
 				813E2FF720E1919100D10BF9 /* SettingsViewController.swift in Sources */,
 			);
@@ -560,7 +587,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S7CCUH8W47;
+				DEVELOPMENT_TEAM = 94C4Q5DME5;
 				INFOPLIST_FILE = "$(SRCROOT)/BadgingTracker/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -579,7 +606,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S7CCUH8W47;
+				DEVELOPMENT_TEAM = 94C4Q5DME5;
 				INFOPLIST_FILE = "$(SRCROOT)/BadgingTracker/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -22,11 +22,13 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     fileprivate func setupViewControllers() {
         
         // Setting up the tab bar
-        let feedViewController = navigationControllerWith(rootViewController: FeedViewController(collectionViewLayout: UICollectionViewFlowLayout()), unselectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), selectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), title: "Feed")
-        let directoryViewController = navigationControllerWith(rootViewController: DirectoryViewController(), unselectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), selectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), title: "Directory")
-        let profileViewController = navigationControllerWith(rootViewController: ProfileViewController(), unselectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), selectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), title: "Profile")
-        let settingsViewController = navigationControllerWith(rootViewController: SettingsViewController(), unselectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), selectedImage: #imageLiteral(resourceName: "xcaTabBarPlaceHolder"), title: "Settings")
+        let feedViewController = navigationControllerWith(rootViewController: FeedViewController(collectionViewLayout: UICollectionViewFlowLayout()), unselectedImage: #imageLiteral(resourceName: "xcaFeedUnselected"), selectedImage: #imageLiteral(resourceName: "xcaSelectedFeed"), title: "Feed")
+        let directoryViewController = navigationControllerWith(rootViewController: DirectoryViewController(), unselectedImage: #imageLiteral(resourceName: "xcaSearchUnselected"), selectedImage: #imageLiteral(resourceName: "xcaSearchSelected"), title: "Directory")
+        let profileViewController = navigationControllerWith(rootViewController: ProfileViewController(), unselectedImage: #imageLiteral(resourceName: "xcaProfileUnselected"), selectedImage: #imageLiteral(resourceName: "xcaProfileSelected"), title: "Profile")
+        let settingsViewController = navigationControllerWith(rootViewController: SettingsViewController(), unselectedImage: #imageLiteral(resourceName: "xcaSettingsUnselected"), selectedImage: #imageLiteral(resourceName: "xcaSettingSelected"), title: "Settings")
         tabBar.tintColor = .black
+        tabBar.backgroundColor = .white
+        tabBar.barTintColor = .white
         viewControllers = [
             feedViewController,
             directoryViewController,

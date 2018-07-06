@@ -94,8 +94,6 @@ class FeedCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        let screenWidth = UIScreen.main.bounds.size.width
-        widthAnchor.constraint(equalToConstant: screenWidth - 11 - 11)
     }
     
     override init(frame: CGRect) {

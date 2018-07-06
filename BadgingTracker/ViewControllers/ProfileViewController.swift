@@ -9,27 +9,27 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    // MARK: - Properties
+    let scrollView = UIScrollView()
+    let headerView = ProfileHeaderView()
 
+    // MARK: - ViewLifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        view.backgroundColor = .white
+        setConstraints()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - Setup
+    func setConstraints() {
+        view.addSubview(scrollView)
+        scrollView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        
+        scrollView.addSubview(headerView)
+        headerView.anchor(top: scrollView.topAnchor, left: scrollView.leftAnchor, bottom: nil, right: scrollView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: view.frame.width, height: 250)
+        
+        
     }
-    */
 
 }

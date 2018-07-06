@@ -11,6 +11,7 @@ import UIKit
 class FeedViewController: UICollectionViewController {
     
     private let reuseIdentifier = "FeedCell"
+    private let headerReuseIdentifier = "HeaderCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class FeedViewController: UICollectionViewController {
     func setupCollectionView() {
         collectionView?.backgroundColor = #colorLiteral(red: 0.9607843137, green: 0.9607843137, blue: 0.9607843137, alpha: 1)
         collectionView?.register(FeedCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
+        collectionView?.register(FeedHeaderCollectionViewCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier)
         navigationController?.navigationBar.barTintColor = UIColor.white
         let imageView = UIImageView(image: #imageLiteral(resourceName: "xcaDevLogo"))
         imageView.contentMode = .scaleAspectFit
@@ -33,6 +34,7 @@ class FeedViewController: UICollectionViewController {
 // MARK: - Collection View Datasource and Delegate -
 extension FeedViewController: UICollectionViewDelegateFlowLayout {
     
+    // Regular Cells
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 6
     }
@@ -53,12 +55,21 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
         return 11 // Sizing between cells
     }
     
-}
-
-extension FeedViewController: UISearchResultsUpdating {
     
-    func updateSearchResults(for searchController: UISearchController) {
-//        let searchText = searchController.searchBar.text ?? ""
+    // Header Cell
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerReuseIdentifier, for: indexPath) as! FeedHeaderCollectionViewCell
+        return header
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
+        return CGSize(width: view.frame.width - 22, height: 120)
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 11
     }
     
 }
