@@ -44,7 +44,11 @@ class AuthenticationController {
 //            guard let uid = user?.uid else {completion(false);return}
             guard let email = user?.email else {completion(false);return}
             guard let key = user?.uid else { return }
+<<<<<<< HEAD
+            let student = Student(name: "TedsName", title: "Student", description: "I'm lookn not to be broke lol", phone: "8015810212", email: email, currentLocation: "SLC", profilePhoto: nil, contactLink: [], graduationDate: Date(), previousClass: nil, currentClass: nil, userUuid: key)
+=======
             let student = Student(name: "TedsName", title: "Student", description: "I'm lookn not to be broke lol", phone: "8015810212", email: email, currentLocation: "SLC", profilePhoto: "", contactLink: [], graduationDate: Date(), previousClass: [], currentClass: [], userUuid: key)
+>>>>>>> 584fef6ddf29f4d7ced17eaa2968c484dedcd5ef
             
             let values:[String: Any] = [
                 "name" : student.name,

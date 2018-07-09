@@ -35,6 +35,7 @@
 		8186C62420E4293500B4DD24 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C60620E4293500B4DD24 /* SF-Pro-Text-Medium.otf */; };
 		8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */; };
 		B0158AAC20EE9AD100433281 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0158AAB20EE9AD100433281 /* AuthenticationController.swift */; };
+		B0158AAE20EEB44300433281 /* ClassModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0158AAD20EEB44300433281 /* ClassModelController.swift */; };
 		B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC1F20E72406003C143E /* LogInPageViewController.swift */; };
 		B046CC2220E818A3003C143E /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC2120E818A3003C143E /* SignUpPageViewController.swift */; };
 		B04A1D9720EAEE6800AA9BC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B04A1D9620EAEE6800AA9BC2 /* GoogleService-Info.plist */; };
@@ -74,6 +75,7 @@
 		8DF122F353158262E84DA189 /* Pods-BadgingTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadgingTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BadgingTracker/Pods-BadgingTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		A17A44DB92B6D7CE9C1BAE17 /* Pods_BadgingTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadgingTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0158AAB20EE9AD100433281 /* AuthenticationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
+		B0158AAD20EEB44300433281 /* ClassModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassModelController.swift; sourceTree = "<group>"; };
 		B046CC1F20E72406003C143E /* LogInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInPageViewController.swift; path = BadgingTracker/KEViews/LogInPageViewController.swift; sourceTree = SOURCE_ROOT; };
 		B046CC2120E818A3003C143E /* SignUpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpPageViewController.swift; path = BadgingTracker/KEViews/SignUpPageViewController.swift; sourceTree = SOURCE_ROOT; };
 		B04A1D9620EAEE6800AA9BC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				B0158AAB20EE9AD100433281 /* AuthenticationController.swift */,
+				B0158AAD20EEB44300433281 /* ClassModelController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */,
 				B0158AAC20EE9AD100433281 /* AuthenticationController.swift in Sources */,
 				5EC5FBB220EE8FF6008A63F2 /* LeadIntructor.swift in Sources */,
+				B0158AAE20EEB44300433281 /* ClassModelController.swift in Sources */,
 				813E2FF720E1919100D10BF9 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

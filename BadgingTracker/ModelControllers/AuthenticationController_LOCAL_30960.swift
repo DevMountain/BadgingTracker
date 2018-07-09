@@ -13,7 +13,7 @@ class AuthenticationController {
     static var shared: AuthenticationController = AuthenticationController()
     var databaseRef : DatabaseReference = Database.database().reference().child("user")
     
-    func fetchuser(email: String, password:String, completion: @escaping (Student?) -> Void) {
+    func fetchuser(email: String, password:String, completion: @escaping (CRStudent?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if let error = error{
                 print("Error  fetching new user \(error.localizedDescription)")
@@ -26,7 +26,7 @@ class AuthenticationController {
                 print(snapShot)
                 guard let dictionary = snapShot.value as? [String:Any] else {completion(nil);return}
               
-                let createStudent = Student(jsonDictionary: dictionary, uuidString: userID)
+                let createStudent = CRStudent(jsonDictionary: dictionary, identifier: userID)
                 print(createStudent ?? "Can't create student")
                 completion(createStudent)
                 
@@ -44,7 +44,7 @@ class AuthenticationController {
 //            guard let uid = user?.uid else {completion(false);return}
             guard let email = user?.email else {completion(false);return}
             guard let key = user?.uid else { return }
-            let student = Student(name: "TedsName", title: "Student", description: "I'm lookn not to be broke lol", phone: "8015810212", email: email, currentLocation: "SLC", profilePhoto: "", contactLink: [], graduationDate: Date(), previousClass: [], currentClass: [], userUuid: key)
+            let student = Student(name: "TedsName", title: "Student", description: "I'm lookn not to be broke lol", phone: "8015810212", email: email, currentLocation: "SLC", profilePhoto: nil, contactLink: [], graduationDate: Date(), previousClass: nil, currentClass: nil, userUuid: key)
             
             let values:[String: Any] = [
                 "name" : student.name,
@@ -52,12 +52,12 @@ class AuthenticationController {
                 "description" : student.description,
                 "phone" : student.phone,
                 "email": student.email,
-                "photo": student.profilePhoto,
-                "links": student.contactLinks,
+                "photo": student.photo,
+                "links": student.links,
                 "graduationDate": student.graduationDate.timeIntervalSince1970,
                 "currentClasses": student.currentClasses,
                 "previousClasses": student.previousClasses,
-                "uuid" : student.userUuid
+                "uuid" : student.uuid
                 
             ]
             
