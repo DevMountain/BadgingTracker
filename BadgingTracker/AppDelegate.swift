@@ -19,6 +19,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         window = UIWindow()
         window?.rootViewController = LogInViewController()
+//        ClassModelController.shared.createAssessementDescription { (success) in
+//            print("Thing 1")
+//        }
+//        ClassModelController.shared.createRequirement { (success) in
+//            print("Thing 2")
+//        }
+//        ClassModelController.shared.createAssessment { (success) in
+//            print("Thing 3")
+//        }
+//        ClassModelController.shared.createClass(class: "IOS ") { (success) in
+//            print("Thing 4")
+//        }
+//        ClassModelController.shared.createRequiredmentDescription { (success) in
+//            print("Thing 5 ")
+//        }
+        
+//
+        ClassModelController.shared.fetchClasses { (class) in
+            print("Got it")
+        }
         return true
     }
 
