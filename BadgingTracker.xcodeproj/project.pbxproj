@@ -11,7 +11,8 @@
 		0173E88520E18C6F00508EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0173E88420E18C6F00508EC2 /* Assets.xcassets */; };
 		0173E88820E18C6F00508EC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0173E88620E18C6F00508EC2 /* LaunchScreen.storyboard */; };
 		01FC1A5320F3F7DB00AE9F38 /* GithubAuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC1A5220F3F7DB00AE9F38 /* GithubAuthenticationController.swift */; };
-		01FC1A5620F3F82600AE9F38 /* GithubDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC1A5520F3F82600AE9F38 /* GithubDependency.swift */; };
+		01FC1A5620F3F82600AE9F38 /* GithubProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC1A5520F3F82600AE9F38 /* GithubProtocol.swift */; };
+		01FC1A5920F3FA8D00AE9F38 /* ErrorHandeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC1A5820F3FA8D00AE9F38 /* ErrorHandeling.swift */; };
 		5E3B5C3F20E6DE920027A2D2 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3B5C3E20E6DE920027A2D2 /* Array+Extensions.swift */; };
 		5EC5FBAE20EE8FF6008A63F2 /* RequirementDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5FBA520EE8FF5008A63F2 /* RequirementDescription.swift */; };
 		5EC5FBAF20EE8FF6008A63F2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5FBA620EE8FF5008A63F2 /* Student.swift */; };
@@ -51,7 +52,8 @@
 		0173E88720E18C6F00508EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0173E88920E18C6F00508EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01FC1A5220F3F7DB00AE9F38 /* GithubAuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAuthenticationController.swift; sourceTree = "<group>"; };
-		01FC1A5520F3F82600AE9F38 /* GithubDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubDependency.swift; sourceTree = "<group>"; };
+		01FC1A5520F3F82600AE9F38 /* GithubProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubProtocol.swift; sourceTree = "<group>"; };
+		01FC1A5820F3FA8D00AE9F38 /* ErrorHandeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandeling.swift; sourceTree = "<group>"; };
 		5E3B5C3E20E6DE920027A2D2 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		5EC5FBA520EE8FF5008A63F2 /* RequirementDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequirementDescription.swift; sourceTree = "<group>"; };
 		5EC5FBA620EE8FF5008A63F2 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -122,7 +124,6 @@
 				0173E87D20E18C6D00508EC2 /* AppDelegate.swift */,
 				B05CCDC020E6F88800AC6D3B /* KEViews */,
 				81270A5320E2AB05005F7152 /* Models */,
-				01FC1A5420F3F7EA00AE9F38 /* DependencyIntection */,
 				B0158AAA20EE9ABB00433281 /* ModelControllers */,
 				81270A5220E2AAFA005F7152 /* Views */,
 				813E2FE920E18EE700D10BF9 /* ViewControllers */,
@@ -131,12 +132,20 @@
 			path = BadgingTracker;
 			sourceTree = "<group>";
 		};
-		01FC1A5420F3F7EA00AE9F38 /* DependencyIntection */ = {
+		01FC1A5420F3F7EA00AE9F38 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				01FC1A5520F3F82600AE9F38 /* GithubDependency.swift */,
+				01FC1A5520F3F82600AE9F38 /* GithubProtocol.swift */,
 			);
-			path = DependencyIntection;
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		01FC1A5720F3FA5800AE9F38 /* ErrorHandeling */ = {
+			isa = PBXGroup;
+			children = (
+				01FC1A5820F3FA8D00AE9F38 /* ErrorHandeling.swift */,
+			);
+			path = ErrorHandeling;
 			sourceTree = "<group>";
 		};
 		16E5F777EFCE6779D9A6A0DA /* Frameworks */ = {
@@ -174,6 +183,8 @@
 		813E2FE620E18E9600D10BF9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				01FC1A5420F3F7EA00AE9F38 /* Protocols */,
+				01FC1A5720F3FA5800AE9F38 /* ErrorHandeling */,
 				8186C5EA20E4293500B4DD24 /* SF Pro */,
 				813E2FFA20E195F800D10BF9 /* Extensions */,
 				0173E88420E18C6F00508EC2 /* Assets.xcassets */,
@@ -390,7 +401,7 @@
 				813E2FF920E195F400D10BF9 /* UIView+Extensions.swift in Sources */,
 				5EC5FBB020EE8FF6008A63F2 /* AssessementDescription.swift in Sources */,
 				813E2FEE20E1913B00D10BF9 /* DirectoryViewController.swift in Sources */,
-				01FC1A5620F3F82600AE9F38 /* GithubDependency.swift in Sources */,
+				01FC1A5620F3F82600AE9F38 /* GithubProtocol.swift in Sources */,
 				B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */,
 				813E2FE820E18EE300D10BF9 /* MainTabBarController.swift in Sources */,
 				813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */,
@@ -405,6 +416,7 @@
 				5EC5FBB520EE8FF6008A63F2 /* Class.swift in Sources */,
 				0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */,
 				5EC5FBB420EE8FF6008A63F2 /* Posts.swift in Sources */,
+				01FC1A5920F3FA8D00AE9F38 /* ErrorHandeling.swift in Sources */,
 				5EC5FBB320EE8FF6008A63F2 /* Requirement.swift in Sources */,
 				5EC5FBB120EE8FF6008A63F2 /* Assessment.swift in Sources */,
 				01FC1A5320F3F7DB00AE9F38 /* GithubAuthenticationController.swift in Sources */,

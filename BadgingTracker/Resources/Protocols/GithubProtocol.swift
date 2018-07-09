@@ -9,15 +9,7 @@
 import Foundation
 
 protocol GithubAuthentication: class {
-    func handlGithubAuthentication()
+    func handlGithubAuthentication(email: String, password: String, completionAccount: @escaping (Student?) -> Void, completion: @escaping (GithubError?, Error?) -> Void)
+    
 }
 
-class GithubDependency {
-    
-    let gitHubAuth: GithubAuthentication
-    
-    init(gitHubAuth: GithubAuthentication) {
-        self.gitHubAuth = gitHubAuth
-    }
-    
-}

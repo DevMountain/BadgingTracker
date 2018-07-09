@@ -7,9 +7,12 @@
 //
 
 import Foundation
+import Firebase
 
 class GithubAuthenticationController {
     
-    
-    
+    // MARK: - Properties
+    let credential = GitHubAuthProvider.credential(withToken: "accessToken")
+ 
+
 }
