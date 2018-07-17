@@ -18,25 +18,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         window = UIWindow()
-        window?.rootViewController = LogInViewController()
+        window?.rootViewController = LogInPageViewController()
 //        ClassModelController.shared.createAssessementDescription { (success) in
 //            print("Thing 1")
 //        }
-//        ClassModelController.shared.createRequirement { (success) in
-//            print("Thing 2")
+//        for _ in 0...10 {
+//            ClassModelController.shared.createRequirement { (success) in
+//                print("Thing 2")
+//            }
 //        }
 //        ClassModelController.shared.createAssessment { (success) in
 //            print("Thing 3")
 //        }
-//        ClassModelController.shared.createClass(class: "IOS ") { (success) in
-//            print("Thing 4")
+//        for i in 1...10 {
+//            ClassModelController.shared.createClass(classTitle: "IOS\(i)") { (success) in
+//                print("Thing 4")
+//            }
 //        }
 //        ClassModelController.shared.createRequiredmentDescription { (success) in
 //            print("Thing 5 ")
 //        }
         
 //
-        ClassModelController.shared.fetchClasses { (class) in
+//        ClassModelController.shared.createPosts { (Success) in
+//            print("Something")
+//        }
+        
+        ClassModelController.shared.fetchClasses { (success) in
             print("Got it")
         }
         return true

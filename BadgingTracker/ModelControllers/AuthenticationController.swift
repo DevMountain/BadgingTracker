@@ -44,7 +44,7 @@ class AuthenticationController {
             }
             guard let email = user?.email else {completion(false);return}
             guard let key = user?.uid else { return }
-            let student = LeadIntructor(name: "Karl the German", title: "Lead Instructor", description: "I wanna be the very best. The best there ever was! To find them is my real quest. To train them is my cause!", phone: "8014562376", email: email, currentLocation: "Salt Lake City", profilePhoto: "", contactLink: [], graduationDate: Date(), previousClass: [], currentClass: [], userUuid: key)
+            let student = Student(name: "Kelly", title: "iOS student", description: "I love Swift", phone: "999999999", email: email, currentLocation: "Salt Lake City", profilePhoto: "", contactLink: [], graduationDate: Date(), previousClass: [], currentClass: [], userUuid: key)
 
             self.databaseRef.child(key).updateChildValues(student.dictionaryRepresentation, withCompletionBlock: { (error, ref) in
                 if let error = error {
@@ -56,6 +56,8 @@ class AuthenticationController {
         }
         
     }
+    
+    
    
 }
 

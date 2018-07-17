@@ -29,7 +29,7 @@ class Post {
     var dictionaryRepresentation: [String: Any] {
         let dictionary: [String: Any] = [
             Constants.messageKey: self.message,
-            Constants.timestampKey: self.timestamp,
+            Constants.timestampKey: self.timestamp.timeIntervalSince1970,
             Constants.senderKey: self.senderUUID,
             Constants.likesKey: Array(self.likes).toDictionary(withDefaultValue: true)
         ]
@@ -49,7 +49,7 @@ class Post {
     
     init?(jsonDictionary: [String: Any], identifier: String) {
         guard let message = jsonDictionary[Constants.messageKey] as? String,
-            let timestamp = jsonDictionary[Constants.timestampKey] as? Date,
+            let timestamp = jsonDictionary[Constants.timestampKey] as? Double,
             let likesDict = jsonDictionary[Constants.likesKey] as? [String:Bool],
             let senderUUID = jsonDictionary[Constants.senderKey] as? String,
             let uuid = UUID(uuidString: identifier) else {
@@ -57,7 +57,7 @@ class Post {
         }
         self.senderUUID = senderUUID
         self.message = message
-        self.timestamp = timestamp
+        self.timestamp = Date(timeIntervalSince1970: timestamp)
         self.likes = Set<String>(likesDict.keys)
         self.uuid = uuid
     }

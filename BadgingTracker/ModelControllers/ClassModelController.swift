@@ -17,15 +17,19 @@ class ClassModelController {
     private var assessmentRef : DatabaseReference = Database.database().reference().child("assessments")
     private var requirementDescriptionRef : DatabaseReference = Database.database().reference().child("requirementDescriptions")
     private var requirementRef : DatabaseReference = Database.database().reference().child("requirements")
-    func createClass(class: String, completion: @escaping ( Bool) -> Void) {
-        let newclass = Class(title: "IOS19", location: "Salt Lake ctiy", cohortID: "IOSSL19", leadInstructorUUID: "Xov4JFkEcYZWoFc4jvGkK5061wp2", scoredAssessmentUUIDs:["LGbLNvTYhO-4bQd9SjW": ["123456"]], assessmentDescriptionUUIDs: [UUID().uuidString])
-        self.classDatabaseRef.childByAutoId().updateChildValues(newclass.dictionaryRepresentation) { (error, ref) in
-            if let  error = error {
-                print("Error updating new class\(error.localizedDescription)")
-                completion(false)
-            }
-            completion(true)
-        }
+    private var postsRef : DatabaseReference = Database.database().reference().child("posts")
+    
+    
+    // Create Functions
+    func createClass(classTitle: String, completion: @escaping ( Bool) -> Void) {
+//        let newclass = Class(title: classTitle, location: "Salt Lake City", cohortID: "SL\(classTitle)")
+//        self.classDatabaseRef.childByAutoId().updateChildValues(newclass.dictionaryRepresentation) { (error, ref) in
+//            if let  error = error {
+//                print("Error updating new class\(error.localizedDescription)")
+//                completion(false)
+//            }
+//            completion(true)
+//        }
     }
     
     func createAssessementDescription(completion: @escaping (Bool) -> Void) {
@@ -52,8 +56,7 @@ class ClassModelController {
     
     func createRequiredmentDescription(completion: @escaping (Bool) -> Void) {
         let newRequiredDescriotion = RequirementDescription(title: "CoreData", description: "Use NSFetchResultControler", maxScore: 10, uuid: UUID())
-        
-        self.requirementDescriptionRef.childByAutoId().updateChildValues(newRequiredDescriotion.dictionaryRepresentation) { (err, ref) in
+            self.requirementDescriptionRef.childByAutoId().updateChildValues(newRequiredDescriotion.dictionaryRepresentation) { (err, ref) in
             if let err = err {
                 print("Error updating assessment \(err.localizedDescription)")
                 completion(false)
@@ -61,6 +64,7 @@ class ClassModelController {
             completion(true)
         }
     }
+    
     func createRequirement(completion: @escaping (Bool) -> Void) {
         let newRequirement = Requirement(score: 10.0, requirementDescriptionUUID: UUID().uuidString, uuid: UUID())
         self.requirementRef.childByAutoId().updateChildValues(newRequirement.dictionaryRepresentation) { (err, ref) in
@@ -72,17 +76,121 @@ class ClassModelController {
         }
     }
     
+    func createPosts(completion: @escaping (Bool) -> Void) {
+        let newPost = Post(message: "Alogithm - Word used by programmers when they do not want to explain what they did", senderUUID: UUID().uuidString, timestamp: Date(), likes: ["Trevor","Frank"], uuid: UUID())
+        
+        self.postsRef.childByAutoId().updateChildValues(newPost.dictionaryRepresentation) { (err, ref) in
+            if let err = err {
+                print("Error updating assessment \(err.localizedDescription)")
+                completion(false)
+            }
+            completion(true)
+        }
+    }
+    
+    // Fetch Functions
     func fetchClasses(completion: @escaping ([Class]?) -> Void) {
-        let classRefHandle = classDatabaseRef.observe(.value) { (snapShot) in
+        classDatabaseRef.observe(.value) { (snapShot) in
             guard let classDict = snapShot.value as? [String:[String: Any]] else { completion(nil) ; return}
-            var classes: [Class] = []
-            for (key, value) in classDict {
-//                print("KEY 🗝", key)
-//                print("VALUE 🐝", value)
-                let devClass = Class(jsonDictionary: value, identifier: key)
-                print(devClass?.cohortID)
+            let classes: [Class] = classDict.compactMap { Class(jsonDictionary: $0.value, identifier: $0.key) }
+            
+            for devClass in classes {
+                self.fetchUsers(withUserIDs: devClass.studentUUIDs, completion: { (students) in
+                    devClass.students = students
+                })
+                self.fetchUsers(withUserIDs: devClass.mentorUUIDs, completion: { (mentors) in
+                    devClass.mentors = mentors?.compactMap { $0 as? Mentor }
+                })
+                self.fetchUser(withUserID: devClass.leadInstructorUUID, completion: { (leadInstructor) in
+                    if let leadInstructor = leadInstructor as? LeadIntructor {
+                        devClass.leadInstructor = leadInstructor
+                    }
+                })
+                self.fetchAssessmentDescriptions(withIDs: devClass.assessmentDescriptionUUIDs, completion: { (assessmentDescriptions) in
+                    devClass.assessmentDescriptions = assessmentDescriptions
+                })
+                for (studentID, assessmentIDDict) in devClass.scoredAssessmentUUIDs {
+                    for (assessmentID, _) in assessmentIDDict {
+                        self.fetchAssessment(withID: assessmentID, completion: { (assessment) in
+                            guard let assessment = assessment else {
+                                return
+                            }
+                            if devClass.scoredAssessments[studentID] == nil {
+                                devClass.scoredAssessments[studentID] = [Assessment]()
+                            }
+                            devClass.scoredAssessments[studentID]?.append(assessment)
+                        })
+                    }
+                }
+                
+            }
+            completion(classes)
+        }
+    }
+    
+    func fetchAssessmentDescriptions(withIDs ids: [String], completion: @escaping ([AssessmentDescription]?) -> Void) {
+        var assessmentDescriptions = [AssessmentDescription]()
+        var count = 0
+        for id in ids {
+            fetchAssessmentDescription(withID: id) { (assessmentDescription) in
+                count += 1
+                if let assessmentDescription = assessmentDescription {
+                    assessmentDescriptions.append(assessmentDescription)
+                }
+                if count == ids.count - 1 {
+                    completion(assessmentDescriptions)
+                }
             }
         }
-      
+    }
+    
+    func fetchAssessmentDescription(withID id: String, completion: @escaping (AssessmentDescription?) -> Void) {
+        
+    }
+    func fetchAssessments(withID ids: [String], completion: @escaping ([Assessment]?) -> Void) {
+        
+    }
+    
+    func fetchAssessment(withID id: String, completion: @escaping (Assessment?) -> Void) {
+        
+    }
+   
+    
+    func fetchRequirementDescriptions
+        (withID id: String, completion: @escaping (RequirementDescription?) -> Void) {
+        
+    }
+    
+    func fetchRequirement(withID id: String, completion: @escaping (Requirement?) -> Void) {
+        
+    }
+    
+    func fetchUsers(withUserIDs ids: [String], completion: @escaping ([Student]?) -> Void) {
+        var users = [Student]()
+        var count = 0
+        for id in ids {
+            fetchUser(withUserID: id) { (user) in
+                count += 1
+                if let user = user {
+                    users.append(user)
+                }
+                if count == ids.count - 1 {
+                    completion(users)
+                }
+            }
+        }
+    }
+    
+    func fetchUser(withUserID id: String, completion: @escaping (Student?) -> Void) {
+        // Check the user cache and return a Student if there already is one.
+        
+        
+    }
+    
+    func fetchPosts(forUserId id: String, completion: @escaping ([Post]?) -> Void) {
+        
     }
 }
+    
+    
+
