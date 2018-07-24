@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		017009E421079962009D1219 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017009E321079962009D1219 /* SignInViewController.swift */; };
+		017009E82107A206009D1219 /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017009E72107A206009D1219 /* GithubUser.swift */; };
+		017009EA2107A275009D1219 /* OAuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017009E92107A275009D1219 /* OAuthHelper.swift */; };
+		017009ED2107A74E009D1219 /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017009EC2107A74E009D1219 /* NetworkingController.swift */; };
 		0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173E87D20E18C6D00508EC2 /* AppDelegate.swift */; };
 		0173E88520E18C6F00508EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0173E88420E18C6F00508EC2 /* Assets.xcassets */; };
 		0173E88820E18C6F00508EC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0173E88620E18C6F00508EC2 /* LaunchScreen.storyboard */; };
+		01F4C96B21064E8E000649EE /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F4C96A21064E8E000649EE /* URL+Extensions.swift */; };
+		01F4C96F210670F5000649EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F4C96E210670F5000649EE /* Main.storyboard */; };
 		01FC1A5320F3F7DB00AE9F38 /* GithubAuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC1A5220F3F7DB00AE9F38 /* GithubAuthenticationController.swift */; };
 		01FC1A5620F3F82600AE9F38 /* GithubProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC1A5520F3F82600AE9F38 /* GithubProtocol.swift */; };
 		01FC1A5920F3FA8D00AE9F38 /* ErrorHandeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC1A5820F3FA8D00AE9F38 /* ErrorHandeling.swift */; };
@@ -46,11 +52,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		017009E321079962009D1219 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		017009E72107A206009D1219 /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
+		017009E92107A275009D1219 /* OAuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthHelper.swift; sourceTree = "<group>"; };
+		017009EC2107A74E009D1219 /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
 		0173E87A20E18C6D00508EC2 /* BadgingTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadgingTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0173E87D20E18C6D00508EC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0173E88420E18C6F00508EC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0173E88720E18C6F00508EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0173E88920E18C6F00508EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01F4C96A21064E8E000649EE /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		01F4C96E210670F5000649EE /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		01FC1A5220F3F7DB00AE9F38 /* GithubAuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAuthenticationController.swift; sourceTree = "<group>"; };
 		01FC1A5520F3F82600AE9F38 /* GithubProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubProtocol.swift; sourceTree = "<group>"; };
 		01FC1A5820F3FA8D00AE9F38 /* ErrorHandeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandeling.swift; sourceTree = "<group>"; };
@@ -100,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		017009EB2107A73D009D1219 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				017009EC2107A74E009D1219 /* NetworkingController.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		0173E87120E18C6D00508EC2 = {
 			isa = PBXGroup;
 			children = (
@@ -132,12 +152,13 @@
 			path = BadgingTracker;
 			sourceTree = "<group>";
 		};
-		01FC1A5420F3F7EA00AE9F38 /* Protocols */ = {
+		01FC1A5420F3F7EA00AE9F38 /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
 				01FC1A5520F3F82600AE9F38 /* GithubProtocol.swift */,
+				017009E92107A275009D1219 /* OAuthHelper.swift */,
 			);
-			path = Protocols;
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 		01FC1A5720F3FA5800AE9F38 /* ErrorHandeling */ = {
@@ -160,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				81270A5520E2B03F005F7152 /* FeedCollectionViewCell.swift */,
+				01F4C96E210670F5000649EE /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +198,7 @@
 				5EC5FBAA20EE8FF6008A63F2 /* Requirement.swift */,
 				5EC5FBA520EE8FF5008A63F2 /* RequirementDescription.swift */,
 				5EC5FBA620EE8FF5008A63F2 /* Student.swift */,
+				017009E72107A206009D1219 /* GithubUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,7 +206,8 @@
 		813E2FE620E18E9600D10BF9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				01FC1A5420F3F7EA00AE9F38 /* Protocols */,
+				017009EB2107A73D009D1219 /* Networking */,
+				01FC1A5420F3F7EA00AE9F38 /* OAuth */,
 				01FC1A5720F3FA5800AE9F38 /* ErrorHandeling */,
 				8186C5EA20E4293500B4DD24 /* SF Pro */,
 				813E2FFA20E195F800D10BF9 /* Extensions */,
@@ -214,6 +238,7 @@
 				813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */,
 				8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */,
 				5E3B5C3E20E6DE920027A2D2 /* Array+Extensions.swift */,
+				01F4C96A21064E8E000649EE /* URL+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -245,6 +270,7 @@
 				B05CCDC120E6F8CB00AC6D3B /* LogInViewController.swift */,
 				B046CC1F20E72406003C143E /* LogInPageViewController.swift */,
 				B046CC2120E818A3003C143E /* SignUpPageViewController.swift */,
+				017009E321079962009D1219 /* SignInViewController.swift */,
 			);
 			name = KEViews;
 			path = "New Group";
@@ -323,6 +349,7 @@
 				8186C61620E4293500B4DD24 /* SF-Pro-Text-Bold.otf in Resources */,
 				0173E88820E18C6F00508EC2 /* LaunchScreen.storyboard in Resources */,
 				8186C62420E4293500B4DD24 /* SF-Pro-Text-Medium.otf in Resources */,
+				01F4C96F210670F5000649EE /* Main.storyboard in Resources */,
 				8186C62020E4293500B4DD24 /* SF-Pro-Text-Semibold.otf in Resources */,
 				8186C61520E4293500B4DD24 /* SF-Pro-Text-Regular.otf in Resources */,
 				0173E88520E18C6F00508EC2 /* Assets.xcassets in Resources */,
@@ -405,19 +432,24 @@
 				B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */,
 				813E2FE820E18EE300D10BF9 /* MainTabBarController.swift in Sources */,
 				813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */,
+				017009E421079962009D1219 /* SignInViewController.swift in Sources */,
 				B046CC2220E818A3003C143E /* SignUpPageViewController.swift in Sources */,
 				B05CCDC220E6F8CB00AC6D3B /* LogInViewController.swift in Sources */,
 				813E2FF120E1915D00D10BF9 /* ProfileViewController.swift in Sources */,
 				5EC5FBB620EE8FF6008A63F2 /* Mentor.swift in Sources */,
+				017009EA2107A275009D1219 /* OAuthHelper.swift in Sources */,
 				81270A5620E2B03F005F7152 /* FeedCollectionViewCell.swift in Sources */,
 				813E2FEB20E1912C00D10BF9 /* FeedViewController.swift in Sources */,
 				5EC5FBAF20EE8FF6008A63F2 /* Student.swift in Sources */,
 				5EC5FBAE20EE8FF6008A63F2 /* RequirementDescription.swift in Sources */,
 				5EC5FBB520EE8FF6008A63F2 /* Class.swift in Sources */,
 				0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */,
+				017009E82107A206009D1219 /* GithubUser.swift in Sources */,
+				017009ED2107A74E009D1219 /* NetworkingController.swift in Sources */,
 				5EC5FBB420EE8FF6008A63F2 /* Posts.swift in Sources */,
 				01FC1A5920F3FA8D00AE9F38 /* ErrorHandeling.swift in Sources */,
 				5EC5FBB320EE8FF6008A63F2 /* Requirement.swift in Sources */,
+				01F4C96B21064E8E000649EE /* URL+Extensions.swift in Sources */,
 				5EC5FBB120EE8FF6008A63F2 /* Assessment.swift in Sources */,
 				01FC1A5320F3F7DB00AE9F38 /* GithubAuthenticationController.swift in Sources */,
 				8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */,

@@ -17,8 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        window = UIWindow()
-        window?.rootViewController = LogInViewController()
+//        window = UIWindow()
+//        window?.rootViewController = LogInViewController()
+        
+//        let gitHubAuth = GithubAuthenticationController()
+//        gitHubAuth.handlGithubAuthentication(email: "reich452@regis.edu", password: "Happybirthday22", completionAccount: { (success) in
+//            print("yaaas")
+//        }) { (githubError, error) in
+//            
+//        }
+//        let firebaseAuth = Auth.auth()
+//        do {
+//            try firebaseAuth.signOut()
+//        } catch let signOutError as NSError {
+//            print ("Error signing out: %@", signOutError)
+//        }
         return true
     }
 

@@ -17,6 +17,7 @@ class LogInViewController: UIViewController {
         view.backgroundColor = .white
         setupLoginButtons()
         setUpContraints()
+    
     }
     let loginWithGithub : UIButton = {
         let button = UIButton(type: .system)

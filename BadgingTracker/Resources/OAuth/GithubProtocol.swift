@@ -9,7 +9,7 @@
 import Foundation
 
 protocol GithubAuthentication: class {
-    func handlGithubAuthentication(email: String, password: String, completionAccount: @escaping (Student?) -> Void, completion: @escaping (GithubError?, Error?) -> Void)
+    func handlGithubAuthentication(email: String, password: String, completionAccount: @escaping (Bool?) -> Void, completion: @escaping (GithubError?, Error?) -> Void)
     
 }
 
