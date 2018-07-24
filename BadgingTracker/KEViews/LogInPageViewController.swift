@@ -95,15 +95,11 @@ class LogInPageViewController: UIViewController {
                 present(alertController, animated: true, completion: nil)
                 
                 return}
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            if let error = error {
-                let alertController = UIAlertController(title: "Resgistration Error", message: error.localizedDescription, preferredStyle: .alert)
-                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                alertController.addAction(okayAction)
-                self.present(alertController, animated: true, completion: nil)
+        AuthenticationController.shared.createUser(email: email, password: password) { (success) in
+            if success {
+                self.view.endEditing(true)
             }
-            self.view.endEditing(true)
-       }
+        }
     }
 }
 

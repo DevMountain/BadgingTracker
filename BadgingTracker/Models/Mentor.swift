@@ -10,4 +10,10 @@ import Foundation
 
 class Mentor: Student {
     
+    override var dictionaryRepresentation: [String : Any] {
+        var dictionary = super.dictionaryRepresentation
+        dictionary[Constants.isMentorKey] = true
+        return dictionary
+    }
+    
 }

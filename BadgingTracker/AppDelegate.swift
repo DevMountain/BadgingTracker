@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+<<<<<<< HEAD
 //        window = UIWindow()
 //        window?.rootViewController = LogInViewController()
         
@@ -32,6 +33,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        } catch let signOutError as NSError {
 //            print ("Error signing out: %@", signOutError)
 //        }
+=======
+        window = UIWindow()
+        window?.rootViewController = LogInPageViewController()
+//        ClassModelController.shared.createAssessementDescription { (success) in
+//            print("Thing 1")
+//        }
+//        for _ in 0...10 {
+//            ClassModelController.shared.createRequirement { (success) in
+//                print("Thing 2")
+//            }
+//        }
+//        ClassModelController.shared.createAssessment { (success) in
+//            print("Thing 3")
+//        }
+//        for i in 1...10 {
+//            ClassModelController.shared.createClass(classTitle: "IOS\(i)") { (success) in
+//                print("Thing 4")
+//            }
+//        }
+//        ClassModelController.shared.createRequiredmentDescription { (success) in
+//            print("Thing 5 ")
+//        }
+        
+//
+//        ClassModelController.shared.createPosts { (Success) in
+//            print("Something")
+//        }
+        
+        ClassModelController.shared.fetchClasses { (success) in
+            print("Got it")
+        }
+>>>>>>> 1e121a87d696fe5ab6038ce2bf5b3b426a76c526
         return true
     }
 

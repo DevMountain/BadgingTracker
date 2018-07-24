@@ -28,13 +28,13 @@ class Class {
     var studentUUIDs: [String]
     var mentorUUIDs: [String]
     var leadInstructorUUID: String
-    var scoredAssessmentUUIDs: [StudentID: [String]]
+    var scoredAssessmentUUIDs: [StudentID: [String:Bool]]
     var assessmentDescriptionUUIDs: [String]
     
     var students: [Student]?
     var mentors: [Mentor]?
     var leadInstructor: LeadIntructor?
-    var scoredAssessments: [StudentID: [Assessment]]?
+    var scoredAssessments: [StudentID: [Assessment]]
     var assessmentDescriptions: [AssessmentDescription]?
     
     var uuid: UUID
@@ -51,24 +51,27 @@ class Class {
             Constants.leadInstructorKey: self.leadInstructorUUID,
             Constants.assessmentDescriptionsKey: self.assessmentDescriptionUUIDs.toDictionary(withDefaultValue: true)
         ]
-        if let scoredAssessments = self.scoredAssessments {
-            var assessmentsDictionary = [String:[String:Bool]]()
-            for (studentID, assessments) in scoredAssessments {
-                assessmentsDictionary[studentID] = assessments.compactMap { $0.id }.toDictionary(withDefaultValue: true)
-            }
-            dictionary[Constants.scoredAssessmentsKey] = assessmentsDictionary
-        }
+//        if let scoredAssessments = self.scoredAssessments {
+//            var assessmentsDictionary = [String:[String:Bool]]()
+//            for (studentID, assessments) in scoredAssessments {
+//                assessmentsDictionary[studentID] = assessments.compactMap { $0.id }.toDictionary(withDefaultValue: true)
+//            }
+//            self.scoredAssessmentUUIDs = assessmentsDictionary
+//        }
+        dictionary[Constants.scoredAssessmentsKey] = self.scoredAssessmentUUIDs
+
         return dictionary
     }
     var jsonData: Data? {
         return try? JSONSerialization.data(withJSONObject: dictionaryRepresentation, options: .prettyPrinted)
     }
     
-    init(title: String, location: String, cohortID: String, studentUUIDs: [String] = [String](), mentorUUIDs: [String] = [String](), leadInstructorUUID: String, scoredAssessmentUUIDs: [StudentID: [String]], assessmentDescriptionUUIDs: [String], uuid: UUID = UUID()) {
+    init(title: String, location: String, cohortID: String, studentUUIDs: [String], mentorUUIDs: [String] = [String](), leadInstructorUUID: String, scoredAssessmentUUIDs: [StudentID: [String:Bool]] = [StudentID: [String:Bool]](), assessmentDescriptionUUIDs: [String] = [String](), uuid: UUID = UUID()) {
         
         self.title = title
         self.location = location
         self.cohortID = cohortID
+        self.scoredAssessments = [StudentID: [Assessment]]()
         self.studentUUIDs = studentUUIDs
         self.mentorUUIDs = mentorUUIDs
         self.leadInstructorUUID = leadInstructorUUID
@@ -84,7 +87,7 @@ class Class {
             let studentUUIDs = jsonDictionary[Constants.studentsKey] as? [String: Bool],
             let mentorUUIDs = jsonDictionary[Constants.mentorsKey] as? [String: Bool],
             let leadInstructorUUID = jsonDictionary[Constants.leadInstructorKey] as? String,
-            let scoredAssessmentUUIDs = jsonDictionary[Constants.scoredAssessmentsKey] as? [StudentID: [String]],
+        let scoredAssessmentUUIDs = jsonDictionary[Constants.scoredAssessmentsKey] as? [StudentID: [String:Bool]],
             let assessmentDescriptionUUIDs = jsonDictionary[Constants.assessmentDescriptionsKey] as? [String: Bool],
             let uuid = UUID(uuidString: identifier) else {
                 return nil
@@ -96,6 +99,7 @@ class Class {
         self.mentorUUIDs = Array(mentorUUIDs.keys)
         self.leadInstructorUUID = leadInstructorUUID
         self.scoredAssessmentUUIDs = scoredAssessmentUUIDs
+        self.scoredAssessments = [StudentID: [Assessment]]()
         self.assessmentDescriptionUUIDs = Array(assessmentDescriptionUUIDs.keys)
         self.uuid = uuid
     }
