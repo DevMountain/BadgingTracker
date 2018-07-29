@@ -37,6 +37,8 @@
 		8186C62420E4293500B4DD24 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C60620E4293500B4DD24 /* SF-Pro-Text-Medium.otf */; };
 		8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */; };
 		81E896A520EED17A0001CC07 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E896A420EED17A0001CC07 /* SearchTableViewCell.swift */; };
+		B0158AAC20EE9AD100433281 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0158AAB20EE9AD100433281 /* AuthenticationController.swift */; };
+		B0158AAE20EEB44300433281 /* ClassModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0158AAD20EEB44300433281 /* ClassModelController.swift */; };
 		B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC1F20E72406003C143E /* LogInPageViewController.swift */; };
 		B046CC2220E818A3003C143E /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC2120E818A3003C143E /* SignUpPageViewController.swift */; };
 		B04A1D9720EAEE6800AA9BC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B04A1D9620EAEE6800AA9BC2 /* GoogleService-Info.plist */; };
@@ -323,12 +325,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BadgingTracker/Pods-BadgingTracker-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,14 +394,14 @@
 				5EC5FBB620EE8FF6008A63F2 /* Mentor.swift in Sources */,
 				81270A5620E2B03F005F7152 /* FeedCollectionViewCell.swift in Sources */,
 				813E2FEB20E1912C00D10BF9 /* FeedViewController.swift in Sources */,
-				5E3C9C1E20E559510098CD3C /* CRAssessment.swift in Sources */,
-				B093726120E4A5D400F9D9FE /* KEAssesment.swift in Sources */,
-				B0A81EE720E345720003BCC5 /* KEStudent.swift in Sources */,
+				5EC5FBAF20EE8FF6008A63F2 /* Student.swift in Sources */,
+				5EC5FBAE20EE8FF6008A63F2 /* RequirementDescription.swift in Sources */,
+				5EC5FBB520EE8FF6008A63F2 /* Class.swift in Sources */,
 				81E896A520EED17A0001CC07 /* SearchTableViewCell.swift in Sources */,
 				0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */,
-				5E3C9C2620E5599E0098CD3C /* CRInstructor.swift in Sources */,
-				B093725D20E4820000F9D9FE /* KERequirementDescription.swift in Sources */,
-				B0A81EE920E3F5390003BCC5 /* KEClass.swift in Sources */,
+				5EC5FBB420EE8FF6008A63F2 /* Posts.swift in Sources */,
+				5EC5FBB320EE8FF6008A63F2 /* Requirement.swift in Sources */,
+				5EC5FBB120EE8FF6008A63F2 /* Assessment.swift in Sources */,
 				81628D7520EFF9A0007C2D0C /* ProfileHeaderView.swift in Sources */,
 				8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */,
 				B0158AAC20EE9AD100433281 /* AuthenticationController.swift in Sources */,
@@ -543,10 +547,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94C4Q5DME5;
 				INFOPLIST_FILE = "$(SRCROOT)/BadgingTracker/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wesstpeak.BadgingTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -562,10 +563,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94C4Q5DME5;
 				INFOPLIST_FILE = "$(SRCROOT)/BadgingTracker/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wesstpeak.BadgingTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

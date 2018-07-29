@@ -34,6 +34,10 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
             directoryViewController,
             profileViewController,
             settingsViewController]
+        
+        // modify tab bar item insets
+        guard let items = tabBar.items else { return }
+        items.forEach { $0.imageInsets = UIEdgeInsets(top: 4, left: 0, bottom: -4, right: 0) }
     }
     
     /// Sets up a NavigationController with a root ViewController. Also sets the tab images for the MainTabBar
@@ -54,7 +58,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         navigationController.tabBarItem.image = unselectedImage
         navigationController.tabBarItem.selectedImage = selectedImage
         
-        navigationController.tabBarItem.title = title
+//        navigationController.tabBarItem.title = title
         
         return navigationController
     }

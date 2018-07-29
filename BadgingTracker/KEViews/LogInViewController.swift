@@ -11,7 +11,6 @@ import Firebase
 
 class LogInViewController: UIViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -33,7 +32,7 @@ class LogInViewController: UIViewController {
         button.setTitle("Log in With Linkedln", for: .normal)
         button.tintColor = UIColor.white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-         button.layer.cornerRadius = 5
+        button.layer.cornerRadius = 5
         return button
     }()
     let login : UIButton = {
@@ -90,9 +89,9 @@ class LogInViewController: UIViewController {
         orTextLabel.anchor(top: stackView.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 0 , paddingBottom: 0, paddingRight: 0, width: 30, height: 18)
         descriptionTextView.anchor(top: login.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 140, paddingLeft: 50, paddingBottom: 0, paddingRight: 50, width: 0, height: 0)
     }
- @objc func loginSegue(){
-    let page = LogInPageViewController()
-    present(page, animated: true, completion: nil)
+    @objc func loginSegue(){
+        let page = LogInPageViewController()
+        present(page, animated: true, completion: nil)
     }
-   
+    
 }
