@@ -23,10 +23,7 @@ class FeedViewController: UICollectionViewController {
         collectionView?.backgroundColor = #colorLiteral(red: 0.9607843137, green: 0.9607843137, blue: 0.9607843137, alpha: 1)
         collectionView?.register(FeedCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView?.register(FeedHeaderCollectionViewCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier)
-        navigationController?.navigationBar.barTintColor = UIColor.white
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "xcaDevLogo"))
-        imageView.contentMode = .scaleAspectFit
-        navigationItem.titleView = imageView
+        setDefaultNavigationBar()
     }
     
 }
