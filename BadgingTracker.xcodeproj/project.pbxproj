@@ -33,6 +33,7 @@
 		813E2FF720E1919100D10BF9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FF620E1919100D10BF9 /* SettingsViewController.swift */; };
 		813E2FF920E195F400D10BF9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */; };
 		813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */; };
+		8146084A21122A1B00C2029F /* SettingsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146084921122A1B00C2029F /* SettingsHeader.swift */; };
 		814D60EB20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D60EA20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift */; };
 		81628D7520EFF9A0007C2D0C /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81628D7420EFF9A0007C2D0C /* ProfileHeaderView.swift */; };
 		816FB1C52110FD0D0080323D /* ProfileCourseAndAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816FB1C42110FD0D0080323D /* ProfileCourseAndAboutView.swift */; };
@@ -79,6 +80,7 @@
 		813E2FF620E1919100D10BF9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		8146084921122A1B00C2029F /* SettingsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeader.swift; sourceTree = "<group>"; };
 		814D60EA20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		81628D7420EFF9A0007C2D0C /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		816FB1C42110FD0D0080323D /* ProfileCourseAndAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCourseAndAboutView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				814D60EA20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift */,
 				81E896A420EED17A0001CC07 /* SearchTableViewCell.swift */,
 				8128BBB521111965005EBC96 /* ProfileTab */,
+				8146084B21122A1D00C2029F /* SettingsTab */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +262,14 @@
 				8128BBB321111643005EBC96 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8146084B21122A1D00C2029F /* SettingsTab */ = {
+			isa = PBXGroup;
+			children = (
+				8146084921122A1B00C2029F /* SettingsHeader.swift */,
+			);
+			path = SettingsTab;
 			sourceTree = "<group>";
 		};
 		8186C5EA20E4293500B4DD24 /* SF Pro */ = {
@@ -463,6 +474,7 @@
 				5EC5FBB420EE8FF6008A63F2 /* Posts.swift in Sources */,
 				5EC5FBB320EE8FF6008A63F2 /* Requirement.swift in Sources */,
 				5EC5FBB120EE8FF6008A63F2 /* Assessment.swift in Sources */,
+				8146084A21122A1B00C2029F /* SettingsHeader.swift in Sources */,
 				81628D7520EFF9A0007C2D0C /* ProfileHeaderView.swift in Sources */,
 				8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */,
 				B0158AAC20EE9AD100433281 /* AuthenticationController.swift in Sources */,
