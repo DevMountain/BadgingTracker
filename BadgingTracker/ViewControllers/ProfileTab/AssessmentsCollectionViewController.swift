@@ -47,7 +47,7 @@ extension AssessmentsCollectionViewController: UICollectionViewDelegateFlowLayou
     
     // FlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 297, height: 187)
+        return CGSize(width: 307, height: 187)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

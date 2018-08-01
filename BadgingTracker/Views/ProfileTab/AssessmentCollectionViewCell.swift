@@ -50,11 +50,12 @@ class AssessmentCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         // FIXME: - Make the course have a proper description based on the user's course
         label.text = "Pass"
+        label.textAlignment = .center
         label.font = UIFont.mainFontRegular(ofSize: 16)
         label.textColor = #colorLiteral(red: 0.1647058824, green: 0.6705882353, blue: 0.8862745098, alpha: 1)
         label.backgroundColor = #colorLiteral(red: 0.8745098039, green: 0.9529411765, blue: 0.9843137255, alpha: 1)
         label.layer.cornerRadius = 3
-        label.layer.borderWidth = 5
+        label.layer.borderWidth = 1
         label.layer.borderColor = #colorLiteral(red: 0.1647058824, green: 0.6705882353, blue: 0.8862745098, alpha: 1)
         return label
     }()
@@ -71,9 +72,6 @@ class AssessmentCollectionViewCell: UICollectionViewCell {
     // MARK: - Initialization
     override func awakeFromNib() {
         super.awakeFromNib()
-        layer.cornerRadius = 5
-        layer.borderWidth = 1
-        layer.borderColor = #colorLiteral(red: 0.7882352941, green: 0.8156862745, blue: 0.8352941176, alpha: 1)
     }
     
     override init(frame: CGRect) {
@@ -87,6 +85,12 @@ class AssessmentCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Setup
     func setConstraints() {
+        // Setup Cell
+        layer.cornerRadius = 5
+        layer.borderWidth = 1
+        layer.borderColor = #colorLiteral(red: 0.7882352941, green: 0.8156862745, blue: 0.8352941176, alpha: 1)
+
+        
         // Adding Subview
         addSubview(assessmentNumberAndTitleLabel)
         addSubview(seperatorView)
@@ -98,7 +102,7 @@ class AssessmentCollectionViewCell: UICollectionViewCell {
         assessmentNumberAndTitleLabel.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 13, paddingLeft: 17, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         seperatorView.anchor(top: assessmentNumberAndTitleLabel.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 13, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 1)
         descriptionLabel.anchor(top: seperatorView.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 13, paddingLeft: 8, paddingBottom: 0, paddingRight: 8, width: 0, height: 0)
-        passLabel.anchor(top: descriptionLabel.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, paddingTop: 13, paddingLeft: 17, paddingBottom: 19, paddingRight: 0, width: 0, height: 0) //!!! Maybe give height
+        passLabel.anchor(top: descriptionLabel.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, paddingTop: 13, paddingLeft: 17, paddingBottom: 19, paddingRight: 0, width: 45, height: 20) //!!! Maybe give height
         dateLabel.anchor(top: nil, left: passLabel.rightAnchor, bottom: bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 8, paddingBottom: 19, paddingRight: 0, width: 0, height: 0)
     }
 }

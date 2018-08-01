@@ -44,8 +44,6 @@ class ProfileViewController: UIViewController {
     
     // MARK: - Setup
     func setConstraints() {
-        // AddSubviews
-        
         // Setup scrollview
         view.addSubview(scrollView)
         scrollView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
@@ -71,7 +69,6 @@ class ProfileViewController: UIViewController {
         editButton.tintColor = #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
         navigationController?.navigationItem.rightBarButtonItem = editButton
         navigationItem.rightBarButtonItem = editButton
-        
     }
     
     // MARK: - Action Functions / Selectors

@@ -33,7 +33,8 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
             feedViewController,
             directoryViewController,
             profileViewController,
-            settingsViewController]
+            settingsViewController
+        ]
         
         // modify tab bar item insets
         guard let items = tabBar.items else { return }

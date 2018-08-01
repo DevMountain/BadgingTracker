@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileHeaderView: UIView {
     
+
     // MARK: - Properties
     let profilePictureImageView: UIImageView = {
         let imageView = UIImageView()

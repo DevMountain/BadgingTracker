@@ -70,6 +70,7 @@ class LogInViewController: UIViewController {
         var stackView = UIStackView()
         return stackView
     }()
+    
     fileprivate func setupLoginButtons() {
         stackView = UIStackView(arrangedSubviews: [loginWithGithub, loginWithLinkedln])
         view.addSubview(stackView)

@@ -54,6 +54,10 @@ class ProfileSocialLinksView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+//    func checkUserSocialMediaLinks(for user: User) -> [UIView] {
+//
+//    }
+    
     // MARK: - Setup
     func setConstraints() {
         addSubview(socialLinksLabel)
