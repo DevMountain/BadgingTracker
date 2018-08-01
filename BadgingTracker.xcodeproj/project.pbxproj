@@ -22,6 +22,10 @@
 		5EC5FBB620EE8FF6008A63F2 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5FBAD20EE8FF6008A63F2 /* Mentor.swift */; };
 		80606AB1A05A2B180B74B240 /* Pods_BadgingTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17A44DB92B6D7CE9C1BAE17 /* Pods_BadgingTracker.framework */; };
 		81270A5620E2B03F005F7152 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81270A5520E2B03F005F7152 /* FeedCollectionViewCell.swift */; };
+		8128BBB421111643005EBC96 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128BBB321111643005EBC96 /* UIViewController+Extensions.swift */; };
+		8128BBB72111198A005EBC96 /* AssessmentsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128BBB62111198A005EBC96 /* AssessmentsCollectionViewController.swift */; };
+		8128BBBD211119EC005EBC96 /* AssessmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128BBBC211119EC005EBC96 /* AssessmentCollectionViewCell.swift */; };
+		8128BBBF2111218C005EBC96 /* ContainerViewForAssessments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128BBBE2111218C005EBC96 /* ContainerViewForAssessments.swift */; };
 		813E2FE820E18EE300D10BF9 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FE720E18EE300D10BF9 /* MainTabBarController.swift */; };
 		813E2FEB20E1912C00D10BF9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FEA20E1912C00D10BF9 /* FeedViewController.swift */; };
 		813E2FEE20E1913B00D10BF9 /* DirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FED20E1913B00D10BF9 /* DirectoryViewController.swift */; };
@@ -31,12 +35,16 @@
 		813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */; };
 		814D60EB20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D60EA20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift */; };
 		81628D7520EFF9A0007C2D0C /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81628D7420EFF9A0007C2D0C /* ProfileHeaderView.swift */; };
+		816FB1C52110FD0D0080323D /* ProfileCourseAndAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816FB1C42110FD0D0080323D /* ProfileCourseAndAboutView.swift */; };
+		816FB1C7211108A70080323D /* ProfileSocialLinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816FB1C6211108A70080323D /* ProfileSocialLinksView.swift */; };
 		8186C61520E4293500B4DD24 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C5F720E4293500B4DD24 /* SF-Pro-Text-Regular.otf */; };
 		8186C61620E4293500B4DD24 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C5F820E4293500B4DD24 /* SF-Pro-Text-Bold.otf */; };
 		8186C62020E4293500B4DD24 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C60220E4293500B4DD24 /* SF-Pro-Text-Semibold.otf */; };
 		8186C62420E4293500B4DD24 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C60620E4293500B4DD24 /* SF-Pro-Text-Medium.otf */; };
 		8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */; };
 		81E896A520EED17A0001CC07 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E896A420EED17A0001CC07 /* SearchTableViewCell.swift */; };
+		B0158AAC20EE9AD100433281 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0158AAB20EE9AD100433281 /* AuthenticationController.swift */; };
+		B0158AAE20EEB44300433281 /* ClassModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0158AAD20EEB44300433281 /* ClassModelController.swift */; };
 		B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC1F20E72406003C143E /* LogInPageViewController.swift */; };
 		B046CC2220E818A3003C143E /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC2120E818A3003C143E /* SignUpPageViewController.swift */; };
 		B04A1D9720EAEE6800AA9BC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B04A1D9620EAEE6800AA9BC2 /* GoogleService-Info.plist */; };
@@ -60,6 +68,10 @@
 		5EC5FBAC20EE8FF6008A63F2 /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		5EC5FBAD20EE8FF6008A63F2 /* Mentor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
 		81270A5520E2B03F005F7152 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		8128BBB321111643005EBC96 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		8128BBB62111198A005EBC96 /* AssessmentsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentsCollectionViewController.swift; sourceTree = "<group>"; };
+		8128BBBC211119EC005EBC96 /* AssessmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentCollectionViewCell.swift; sourceTree = "<group>"; };
+		8128BBBE2111218C005EBC96 /* ContainerViewForAssessments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewForAssessments.swift; sourceTree = "<group>"; };
 		813E2FE720E18EE300D10BF9 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		813E2FEA20E1912C00D10BF9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		813E2FED20E1913B00D10BF9 /* DirectoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +81,8 @@
 		813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		814D60EA20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		81628D7420EFF9A0007C2D0C /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		816FB1C42110FD0D0080323D /* ProfileCourseAndAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCourseAndAboutView.swift; sourceTree = "<group>"; };
+		816FB1C6211108A70080323D /* ProfileSocialLinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSocialLinksView.swift; sourceTree = "<group>"; };
 		8186C5F720E4293500B4DD24 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		8186C5F820E4293500B4DD24 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		8186C60220E4293500B4DD24 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
@@ -79,6 +93,7 @@
 		8DF122F353158262E84DA189 /* Pods-BadgingTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadgingTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BadgingTracker/Pods-BadgingTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		A17A44DB92B6D7CE9C1BAE17 /* Pods_BadgingTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadgingTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0158AAB20EE9AD100433281 /* AuthenticationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
+		B0158AAD20EEB44300433281 /* ClassModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassModelController.swift; sourceTree = "<group>"; };
 		B046CC1F20E72406003C143E /* LogInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInPageViewController.swift; path = BadgingTracker/KEViews/LogInPageViewController.swift; sourceTree = SOURCE_ROOT; };
 		B046CC2120E818A3003C143E /* SignUpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpPageViewController.swift; path = BadgingTracker/KEViews/SignUpPageViewController.swift; sourceTree = SOURCE_ROOT; };
 		B04A1D9620EAEE6800AA9BC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -143,7 +158,7 @@
 				81270A5520E2B03F005F7152 /* FeedCollectionViewCell.swift */,
 				814D60EA20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift */,
 				81E896A420EED17A0001CC07 /* SearchTableViewCell.swift */,
-				81628D7420EFF9A0007C2D0C /* ProfileHeaderView.swift */,
+				8128BBB521111965005EBC96 /* ProfileTab */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +179,51 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		8128BBB521111965005EBC96 /* ProfileTab */ = {
+			isa = PBXGroup;
+			children = (
+				81628D7420EFF9A0007C2D0C /* ProfileHeaderView.swift */,
+				816FB1C42110FD0D0080323D /* ProfileCourseAndAboutView.swift */,
+				816FB1C6211108A70080323D /* ProfileSocialLinksView.swift */,
+				8128BBBC211119EC005EBC96 /* AssessmentCollectionViewCell.swift */,
+				8128BBBE2111218C005EBC96 /* ContainerViewForAssessments.swift */,
+			);
+			path = ProfileTab;
+			sourceTree = "<group>";
+		};
+		8128BBB82111198F005EBC96 /* ProfileTab */ = {
+			isa = PBXGroup;
+			children = (
+				813E2FF020E1915D00D10BF9 /* ProfileViewController.swift */,
+				8128BBB62111198A005EBC96 /* AssessmentsCollectionViewController.swift */,
+			);
+			path = ProfileTab;
+			sourceTree = "<group>";
+		};
+		8128BBB921111998005EBC96 /* FeedTab */ = {
+			isa = PBXGroup;
+			children = (
+				813E2FEA20E1912C00D10BF9 /* FeedViewController.swift */,
+			);
+			path = FeedTab;
+			sourceTree = "<group>";
+		};
+		8128BBBA211119A1005EBC96 /* DirectoryTab */ = {
+			isa = PBXGroup;
+			children = (
+				813E2FED20E1913B00D10BF9 /* DirectoryViewController.swift */,
+			);
+			path = DirectoryTab;
+			sourceTree = "<group>";
+		};
+		8128BBBB211119AA005EBC96 /* SettingsTab */ = {
+			isa = PBXGroup;
+			children = (
+				813E2FF620E1919100D10BF9 /* SettingsViewController.swift */,
+			);
+			path = SettingsTab;
+			sourceTree = "<group>";
+		};
 		813E2FE620E18E9600D10BF9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,10 +241,10 @@
 			isa = PBXGroup;
 			children = (
 				813E2FE720E18EE300D10BF9 /* MainTabBarController.swift */,
-				813E2FEA20E1912C00D10BF9 /* FeedViewController.swift */,
-				813E2FED20E1913B00D10BF9 /* DirectoryViewController.swift */,
-				813E2FF020E1915D00D10BF9 /* ProfileViewController.swift */,
-				813E2FF620E1919100D10BF9 /* SettingsViewController.swift */,
+				8128BBB921111998005EBC96 /* FeedTab */,
+				8128BBBA211119A1005EBC96 /* DirectoryTab */,
+				8128BBB82111198F005EBC96 /* ProfileTab */,
+				8128BBBB211119AA005EBC96 /* SettingsTab */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -196,6 +256,7 @@
 				813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */,
 				8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */,
 				5E3B5C3E20E6DE920027A2D2 /* Array+Extensions.swift */,
+				8128BBB321111643005EBC96 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -215,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				B0158AAB20EE9AD100433281 /* AuthenticationController.swift */,
+				B0158AAD20EEB44300433281 /* ClassModelController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -321,12 +383,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BadgingTracker/Pods-BadgingTracker-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,9 +442,12 @@
 				813E2FF920E195F400D10BF9 /* UIView+Extensions.swift in Sources */,
 				5EC5FBB020EE8FF6008A63F2 /* AssessementDescription.swift in Sources */,
 				813E2FEE20E1913B00D10BF9 /* DirectoryViewController.swift in Sources */,
+				8128BBB421111643005EBC96 /* UIViewController+Extensions.swift in Sources */,
 				B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */,
+				8128BBBD211119EC005EBC96 /* AssessmentCollectionViewCell.swift in Sources */,
 				813E2FE820E18EE300D10BF9 /* MainTabBarController.swift in Sources */,
 				814D60EB20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift in Sources */,
+				8128BBB72111198A005EBC96 /* AssessmentsCollectionViewController.swift in Sources */,
 				813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */,
 				B046CC2220E818A3003C143E /* SignUpPageViewController.swift in Sources */,
 				B05CCDC220E6F8CB00AC6D3B /* LogInViewController.swift in Sources */,
@@ -388,18 +455,22 @@
 				5EC5FBB620EE8FF6008A63F2 /* Mentor.swift in Sources */,
 				81270A5620E2B03F005F7152 /* FeedCollectionViewCell.swift in Sources */,
 				813E2FEB20E1912C00D10BF9 /* FeedViewController.swift in Sources */,
-				5E3C9C1E20E559510098CD3C /* CRAssessment.swift in Sources */,
-				B093726120E4A5D400F9D9FE /* KEAssesment.swift in Sources */,
-				B0A81EE720E345720003BCC5 /* KEStudent.swift in Sources */,
+				5EC5FBAF20EE8FF6008A63F2 /* Student.swift in Sources */,
+				5EC5FBAE20EE8FF6008A63F2 /* RequirementDescription.swift in Sources */,
+				5EC5FBB520EE8FF6008A63F2 /* Class.swift in Sources */,
 				81E896A520EED17A0001CC07 /* SearchTableViewCell.swift in Sources */,
 				0173E87E20E18C6D00508EC2 /* AppDelegate.swift in Sources */,
-				5E3C9C2620E5599E0098CD3C /* CRInstructor.swift in Sources */,
-				B093725D20E4820000F9D9FE /* KERequirementDescription.swift in Sources */,
-				B0A81EE920E3F5390003BCC5 /* KEClass.swift in Sources */,
+				5EC5FBB420EE8FF6008A63F2 /* Posts.swift in Sources */,
+				5EC5FBB320EE8FF6008A63F2 /* Requirement.swift in Sources */,
+				5EC5FBB120EE8FF6008A63F2 /* Assessment.swift in Sources */,
 				81628D7520EFF9A0007C2D0C /* ProfileHeaderView.swift in Sources */,
 				8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */,
 				B0158AAC20EE9AD100433281 /* AuthenticationController.swift in Sources */,
+				8128BBBF2111218C005EBC96 /* ContainerViewForAssessments.swift in Sources */,
 				5EC5FBB220EE8FF6008A63F2 /* LeadIntructor.swift in Sources */,
+				816FB1C52110FD0D0080323D /* ProfileCourseAndAboutView.swift in Sources */,
+				816FB1C7211108A70080323D /* ProfileSocialLinksView.swift in Sources */,
+				B0158AAE20EEB44300433281 /* ClassModelController.swift in Sources */,
 				813E2FF720E1919100D10BF9 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

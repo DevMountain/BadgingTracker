@@ -103,6 +103,9 @@ class LogInPageViewController: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
             }
             self.view.endEditing(true)
+            let mainTabBarController = MainTabBarController()
+//            user?.user = dkjsaldf.loggedInUser
+            self.present(mainTabBarController, animated: true)
        }
     }
 }

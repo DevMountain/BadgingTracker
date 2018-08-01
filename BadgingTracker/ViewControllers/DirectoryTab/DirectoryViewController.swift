@@ -109,7 +109,7 @@ class DirectoryViewController: UIViewController {
     // FIXME: - This is where you handle the filtering
     @objc fileprivate func buttonTapped(sender: UIButton) {
         if sender.titleLabel?.textColor == #colorLiteral(red: 0.737254902, green: 0.7215686275, blue: 0.7215686275, alpha: 1) {
-            sender.backgroundColor = #colorLiteral(red: 0.5647058824, green: 0.5647058824, blue: 0.5647058824, alpha: 1)
+            sender.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
             sender.setTitleColor(.white, for: .normal)
         } else {
             sender.backgroundColor = .clear
@@ -154,7 +154,7 @@ class DirectoryViewController: UIViewController {
         filterView.addSubview(stackView)
         stackView.anchor(top: filterView.topAnchor, left: filterView.leftAnchor, bottom: filterView.bottomAnchor, right: filterView.rightAnchor, paddingTop: 10, paddingLeft: 15, paddingBottom: 10, paddingRight: 15, width: 0, height: 0)
     }
-
+    
 }
 
 // MARK: - TableViewDelegate and Datasources
