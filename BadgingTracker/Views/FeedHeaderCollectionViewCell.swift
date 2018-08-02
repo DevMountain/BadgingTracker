@@ -44,6 +44,7 @@ class FeedHeaderCollectionViewCell: UICollectionViewCell {
     let mentorImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.layer.cornerRadius = 35 / 2
+        imageView.clipsToBounds = true
         imageView.backgroundColor = #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
         return imageView
     }()

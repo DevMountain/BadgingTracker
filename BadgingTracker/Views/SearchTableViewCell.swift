@@ -11,9 +11,16 @@ import UIKit
 class SearchTableViewCell: UITableViewCell {
     
     // MARK: - Properties
+    var student: Student? {
+        didSet {
+            self.setupViews()
+        }
+    }
+    
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         imageView.backgroundColor = #colorLiteral(red: 0.8274509804, green: 0.8235294118, blue: 0.8274509804, alpha: 1)
         imageView.layer.cornerRadius = 75 / 2
         return imageView
@@ -53,6 +60,15 @@ class SearchTableViewCell: UITableViewCell {
     }
     
     // MARK: - Setup Functions
+    private func setupViews() {
+        guard let student = student else {
+            return
+        }
+        self.cohortAndCityLabel.text = "\(student.currentClassUUIDs.first ?? "iOS19") Immersive \n\(student.currentLocation)"
+        self.nameLabel.text = student.name
+        self.profileImageView.image = student.profilePhotoImage
+    }
+    
     func setConstraints() {
         addSubview(profileImageView)
         addSubview(nameLabel)

@@ -9,6 +9,7 @@
 import UIKit
 
 typealias StudentID = String
+typealias User = Student
 
 class Student {
     
@@ -35,6 +36,7 @@ class Student {
     var currentLocation: String
     var graduationDate: Date
     var profilePhoto: String
+    var profilePhotoImage: UIImage = UIImage(named: "profile_empty_large")!
     var contactLinks: [String]?
     var isPrivate: Bool = false
     var currentClassUUIDs: [String]
@@ -81,6 +83,9 @@ class Student {
         
         self.name = name
         self.profilePhoto = profilePhoto
+        if let profileImage = UIImage(named: profilePhoto) {
+            self.profilePhotoImage = profileImage
+        }
         self.title = title
         self.contactLinks = contactLink
         self.description = description

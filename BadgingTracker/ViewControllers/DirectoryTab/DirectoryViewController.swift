@@ -160,11 +160,13 @@ class DirectoryViewController: UIViewController {
 // MARK: - TableViewDelegate and Datasources
 extension DirectoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return UserController.shared.usersDictionary.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) as! SearchTableViewCell
+        let user = UserController.shared.user(at: indexPath.row)
+        cell.student = user
         return cell
     }
     

@@ -33,22 +33,24 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
     
     // Regular Cells
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return FeedController.shared.posts.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCollectionViewCell
-        cell.backgroundColor = .white
-        if indexPath.row % 2 == 0 {
-            cell.bodyTextLabel.text = "func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {"
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? FeedCollectionViewCell else {
+            return UICollectionViewCell()
         }
+        cell.feedPost = FeedController.shared.posts[indexPath.row]
+        cell.backgroundColor = .white
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height: CGFloat = view.frame.width * 0.53 // The height is 53% of of the views width
+        guard let cell = collectionView.cellForItem(at: indexPath) as? FeedCollectionViewCell else {
+            return CGSize(width: view.frame.width - 22, height: view.frame.width * 0.53) // The height is 53% of of the views width
+        }
         
-        return CGSize(width: view.frame.width - 22, height: height) // 11 + 11 for side insets
+        return CGSize(width: view.frame.width - 22, height: cell.calculatedHeight) // 11 + 11 for side insets
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -57,16 +59,18 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
     
     
     // Header Cell
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerReuseIdentifier, for: indexPath) as! FeedHeaderCollectionViewCell
-        return header
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        
-        return CGSize(width: view.frame.width - 22, height: 120)
-    }
-    
+//    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        guard let user = UserController.shared.loggedInUser as? Mentor else {
+//            return UICollectionViewCell()
+//        }
+//        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerReuseIdentifier, for: indexPath) as! FeedHeaderCollectionViewCell
+//        header.mentorImageView.image = user.profilePhotoImage
+//        return header
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+//        return CGSize(width: view.frame.width - 22, height: 120)
+//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 11
