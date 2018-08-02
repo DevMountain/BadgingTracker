@@ -17,6 +17,7 @@ class ClassModelController {
     private var assessmentRef : DatabaseReference = Database.database().reference().child("assessment")
     private var requirementDescriptionRef : DatabaseReference = Database.database().reference().child("requirementDescription")
     private var requirementRef : DatabaseReference = Database.database().reference().child("requirement")
+    
     func createClass(class: String, completion: @escaping ( Bool) -> Void) {
         var newclass = Class(title: "IOS19", location: "Salt Lake ctiy", cohortID: "IOSSL19", leadInstructorUUID: "Xov4JFkEcYZWoFc4jvGkK5061wp2", scoredAssessmentUUIDs:["LGbLNvTYhO-4bQd9SjW": ["123456"]], assessmentDescriptionUUIDs: [UUID().uuidString])
         let value : [String:Any] = [
@@ -85,6 +86,7 @@ class ClassModelController {
             completion(true)
         }
     }
+    
     func createRequirement(completion: @escaping (Bool) -> Void) {
         var newRequirement = Requirement(score: 10.0, requirementDescriptionUUID: UUID().uuidString, uuid: UUID())
         let value : [String:Any] = [
@@ -99,4 +101,109 @@ class ClassModelController {
             completion(true)
         }
     }
+    
+    // Fetch Functions
+    func fetchClasses(completion: @escaping ([Class]?) -> Void) {
+        classDatabaseRef.observe(.value) { (snapShot) in
+            guard let classDict = snapShot.value as? [String:[String: Any]] else { completion(nil) ; return}
+            let classes: [Class] = classDict.compactMap { Class(jsonDictionary: $0.value, identifier: $0.key) }
+            
+            for devClass in classes {
+                self.fetchUsers(withUserIDs: devClass.studentUUIDs, completion: { (students) in
+                    devClass.students = students
+                })
+                self.fetchUsers(withUserIDs: devClass.mentorUUIDs, completion: { (mentors) in
+                    devClass.mentors = mentors?.compactMap { $0 as? Mentor }
+                })
+                self.fetchUser(withUserID: devClass.leadInstructorUUID, completion: { (leadInstructor) in
+                    if let leadInstructor = leadInstructor as? LeadIntructor {
+                        devClass.leadInstructor = leadInstructor
+                    }
+                })
+                self.fetchAssessmentDescriptions(withIDs: devClass.assessmentDescriptionUUIDs, completion: { (assessmentDescriptions) in
+                    devClass.assessmentDescriptions = assessmentDescriptions
+                })
+                for (studentID, assessmentIDDict) in devClass.scoredAssessmentUUIDs {
+                    for assessmentID in assessmentIDDict {
+                        self.fetchAssessment(withID: assessmentID, completion: { (assessment) in
+                            guard let assessment = assessment else {
+                                return
+                            }
+//                            if devClass.scoredAssessments[studentID] == nil {
+//                                devClass.scoredAssessments[studentID] = [Assessment]()
+//                            }
+//                            devClass.scoredAssessments[studentID]?.append(assessment)
+                        })
+                    }
+                }
+                
+            }
+            completion(classes)
+        }
+    }
+    
+    func fetchAssessmentDescriptions(withIDs ids: [String], completion: @escaping ([AssessmentDescription]?) -> Void) {
+        var assessmentDescriptions = [AssessmentDescription]()
+        var count = 0
+        for id in ids {
+            fetchAssessmentDescription(withID: id) { (assessmentDescription) in
+                count += 1
+                if let assessmentDescription = assessmentDescription {
+                    assessmentDescriptions.append(assessmentDescription)
+                }
+                if count == ids.count - 1 {
+                    completion(assessmentDescriptions)
+                }
+            }
+        }
+    }
+    
+    func fetchAssessmentDescription(withID id: String, completion: @escaping (AssessmentDescription?) -> Void) {
+        
+    }
+    func fetchAssessments(withID ids: [String], completion: @escaping ([Assessment]?) -> Void) {
+        
+    }
+    
+    func fetchAssessment(withID id: String, completion: @escaping (Assessment?) -> Void) {
+        
+    }
+    
+    
+    func fetchRequirementDescriptions
+        (withID id: String, completion: @escaping (RequirementDescription?) -> Void) {
+        
+    }
+    
+    func fetchRequirement(withID id: String, completion: @escaping (Requirement?) -> Void) {
+        
+    }
+    
+    func fetchUsers(withUserIDs ids: [String], completion: @escaping ([Student]?) -> Void) {
+        var users = [Student]()
+        var count = 0
+        for id in ids {
+            fetchUser(withUserID: id) { (user) in
+                count += 1
+                if let user = user {
+                    users.append(user)
+                }
+                if count == ids.count - 1 {
+                    completion(users)
+                }
+            }
+        }
+    }
+    
+    func fetchUser(withUserID id: String, completion: @escaping (Student?) -> Void) {
+        // Check the user cache and return a Student if there already is one.
+        
+        
+    }
+    
+    func fetchPosts(forUserId id: String, completion: @escaping ([Post]?) -> Void) {
+        
+    }
+    
+    
 }
