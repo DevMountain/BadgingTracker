@@ -106,6 +106,10 @@ class FeedCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        
+    }
+    
     // MARK: - Setup
     private func setupCell() {
         layer.cornerRadius = 3
@@ -131,8 +135,8 @@ class FeedCollectionViewCell: UICollectionViewCell {
         nameLabel.anchor(top: topAnchor, left: profileImageView.rightAnchor, bottom: nil, right: nil, paddingTop: 15, paddingLeft: 10, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         optionsButton.anchor(top: topAnchor, left: nil, bottom: nil, right: rightAnchor, paddingTop: 8, paddingLeft: 0, paddingBottom: 0, paddingRight: 8, width: 20, height: 20)
         postTypeLabel.anchor(top: nameLabel.bottomAnchor, left: profileImageView.rightAnchor, bottom: nil, right: nil, paddingTop: 2, paddingLeft: 10, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
-        bodyTextLabel.anchor(top: nil, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 11, paddingLeft: 15, paddingBottom: 0, paddingRight: 15, width: 0, height: 0)
-        likesTotalLabel.anchor(top: nil, left: leftAnchor, bottom: bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 15, paddingBottom: 11, paddingRight: 0, width: 0, height: 0)
+        bodyTextLabel.anchor(top: postTypeLabel.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 11, paddingLeft: 15, paddingBottom: 0, paddingRight: 15, width: 0, height: 0)
+        likesTotalLabel.anchor(top: bodyTextLabel.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 15, paddingBottom: 11, paddingRight: 0, width: 0, height: 0)
         seperatorView.anchor(top: nil, left: leftAnchor, bottom: likesTotalLabel.topAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 15, paddingBottom: 10, paddingRight: 15, width: 0, height: 1)
         likeButton.anchor(top: nil, left: leftAnchor, bottom: seperatorView.topAnchor, right: nil, paddingTop: 0, paddingLeft: 20, paddingBottom: 18, paddingRight: 0, width: 0, height: 0)
     }

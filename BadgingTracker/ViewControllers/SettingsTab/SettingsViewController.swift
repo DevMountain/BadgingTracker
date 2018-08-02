@@ -1,17 +1,14 @@
-//
 //  SettingsViewController.swift
-//  BadgingTracker
-//
 //  Created by Jayden Garrick on 6/25/18.
+//  BadgingTracker
 //  Copyright © 2018 Nick Reichard. All rights reserved.
-//
 
 import UIKit
 
 class SettingsViewController: UITableViewController {
     
     // MARK: - Properties
-
+    
     // MARK: - ViewLifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +21,7 @@ class SettingsViewController: UITableViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.bounces = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "settingsCell")
+        tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: "settingsCell")
         tableView.separatorStyle = .none
     }
     
@@ -32,23 +29,39 @@ class SettingsViewController: UITableViewController {
 
 // MARK: - TableView Delegate and Datasource
 extension SettingsViewController {
+    
+    // MAIN CELL //
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath)
-        cell.textLabel?.text = "TEST"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath) as! SettingsTableViewCell
+        if indexPath.row % 2 == 0 {
+            cell.cellSwitch = nil
+        }
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
     }
     
     // HEADER //
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return SettingsHeader()
+        if section == 0 {
+            return SettingsHeader()
+        } else {
+            return nil
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 200
+        if section == 0 {
+            return 200
+        } else {
+            return 0
+        }
     }
     
     // FOOTER //
@@ -77,7 +90,11 @@ extension SettingsViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 92
+        if section == 0 {
+            return 92
+        } else {
+            return 0
+        }
     }
     
 }
