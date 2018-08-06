@@ -94,11 +94,20 @@ class DirectoryViewController: UIViewController {
         button.backgroundColor = .clear
         return button
     }()
+    var seachBarIsEditing: Bool = false
+    var filteredUsers: [User] = []
+    var allUsers: [User] = [] {
+        didSet {
+            filteredUsers = allUsers
+            tableView.reloadData()
+        }
+    }
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.9568627451, green: 0.9529411765, blue: 0.9529411765, alpha: 1)
+        self.allUsers = UserController.shared.users
         setConstraintsForMainView()
         setupTableView()
         setSearchBar()
@@ -111,10 +120,19 @@ class DirectoryViewController: UIViewController {
         if sender.titleLabel?.textColor == #colorLiteral(red: 0.737254902, green: 0.7215686275, blue: 0.7215686275, alpha: 1) {
             sender.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
             sender.setTitleColor(.white, for: .normal)
+            if sender == badgedButton {
+                filteredUsers = allUsers.filter {
+                    return $0.hasBadged
+                }
+            }
         } else {
             sender.backgroundColor = .clear
             sender.setTitleColor(#colorLiteral(red: 0.737254902, green: 0.7215686275, blue: 0.7215686275, alpha: 1), for: .normal)
+            if sender == badgedButton {
+                filteredUsers = allUsers
+            }
         }
+        tableView.reloadData()
     }
     
     // MARK: - Setup Functions
@@ -134,6 +152,7 @@ class DirectoryViewController: UIViewController {
         let searchBar = UISearchBar()
         searchBar.barStyle = UIBarStyle.default
         searchBar.placeholder = "Search..."
+        searchBar.delegate = self
         self.searchBar = searchBar
         navigationItem.titleView = searchBar
     }
@@ -160,13 +179,14 @@ class DirectoryViewController: UIViewController {
 // MARK: - TableViewDelegate and Datasources
 extension DirectoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return UserController.shared.usersDictionary.count
+        return filteredUsers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) as! SearchTableViewCell
-        let user = UserController.shared.user(at: indexPath.row)
+        let user = filteredUsers[indexPath.row]
         cell.student = user
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -174,5 +194,50 @@ extension DirectoryViewController: UITableViewDelegate, UITableViewDataSource {
         return 115
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if self.seachBarIsEditing {
+            searchBar?.resignFirstResponder()
+        } else {
+            let profileVC = ProfileViewController()
+            profileVC.user = filteredUsers[indexPath.row]
+            self.navigationController?.pushViewController(profileVC, animated: true)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+// MARK: - SearchBarDelegate
+extension DirectoryViewController: UISearchBarDelegate {
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.seachBarIsEditing = true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        self.seachBarIsEditing = false
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            filteredUsers = allUsers
+        } else {
+            filteredUsers = allUsers.filter {
+                let name = $0.name.lowercased()
+                return name.contains(searchText.lowercased())
+            }
+        }
+        tableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        filteredUsers = allUsers
+        tableView.reloadData()
+        searchBar.resignFirstResponder()
+    }
     
 }

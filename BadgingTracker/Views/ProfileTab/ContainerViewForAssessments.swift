@@ -23,9 +23,14 @@ class ContainerViewForAssessments: UIView {
         view.backgroundColor = .yellow
         return view
     }()
-    
+    var user: User!
     
     // MARK: - Initialization
+    convenience init(user: User) {
+        self.init()
+        self.user = user
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
@@ -37,6 +42,11 @@ class ContainerViewForAssessments: UIView {
     }
     
     // MARK: - Setup
+    func reloadViews() {
+        
+        self.setNeedsLayout()
+    }
+    
     func setConstraints() {
         // Add Subview
         addSubview(assessmentLabel)

@@ -14,22 +14,7 @@ class ProfileCourseAndAboutView: UIView {
     let courseTitleAndDescriptionLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        let attributedText = NSMutableAttributedString(string: "Course \n", attributes: [
-            NSAttributedStringKey.font: UIFont.mainFontSemiBold(ofSize: 16),
-            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
-            ])
-        
-        // Small Linebreak for spacing
-        attributedText.append(NSAttributedString(string: "\n", attributes: [
-            NSAttributedStringKey.font : UIFont.systemFont(ofSize: 10)
-            ]))
-        
-        // FIXME: - Make the course have a proper description based on the user's course
-        attributedText.append(NSAttributedString(string: "iOS Development", attributes: [
-            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1),
-            NSAttributedStringKey.font: UIFont.mainFontRegular(ofSize: 15)
-            ]))
-        label.attributedText = attributedText
+        label.attributedText = ProfileCourseAndAboutView.createTitleAndDescription(withTitle: "Course", withDescription: "iOS Development")
         return label
     }()
     
@@ -55,27 +40,19 @@ class ProfileCourseAndAboutView: UIView {
     let aboutLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        let attributedText = NSMutableAttributedString(string: "About \n", attributes: [
-            NSAttributedStringKey.font: UIFont.mainFontSemiBold(ofSize: 16),
-            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
-            ])
-        
-        // Small Linebreak for spacing
-        attributedText.append(NSAttributedString(string: "\n", attributes: [
-            NSAttributedStringKey.font : UIFont.systemFont(ofSize: 10)
-            ]))
-        
-        // FIXME: - Make the course have a proper description based on the user's course
-        attributedText.append(NSAttributedString(string: "I'm really into blockchain and emerging technologies. I am only looking for jobs where Karl is my boss!", attributes: [
-            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1),
-            NSAttributedStringKey.font: UIFont.mainFontRegular(ofSize: 15)
-            ]))
-        label.attributedText = attributedText
+        label.attributedText = ProfileCourseAndAboutView.createTitleAndDescription(withTitle: "About", withDescription: "I'm really into blockchain and emerging technologies. I am only looking for jobs where Karl is my boss!")
         return label
 
     }()
+    var user: User!
     
     // MARK: - Initialization
+    convenience init(user: User) {
+        self.init()
+        self.user = user
+        reloadViews()
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
@@ -87,6 +64,33 @@ class ProfileCourseAndAboutView: UIView {
     }
     
     // MARK: - Setup Functions
+    static func createTitleAndDescription(withTitle title: String, withDescription description: String) -> NSMutableAttributedString {
+        let attributedText = NSMutableAttributedString(string: "\(title) \n", attributes: [
+            NSAttributedStringKey.font: UIFont.mainFontSemiBold(ofSize: 16),
+            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
+            ])
+        
+        // Small Linebreak for spacing
+        attributedText.append(NSAttributedString(string: "\n", attributes: [
+            NSAttributedStringKey.font : UIFont.systemFont(ofSize: 10)
+            ]))
+        
+        // FIXME: - Make the course have a proper description based on the user's course
+        attributedText.append(NSAttributedString(string: description, attributes: [
+            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1),
+            NSAttributedStringKey.font: UIFont.mainFontRegular(ofSize: 15)
+            ]))
+        return attributedText
+    }
+    
+    func reloadViews() {
+        courseTitleAndDescriptionLabel.attributedText = ProfileCourseAndAboutView.createTitleAndDescription(withTitle: "Course", withDescription: user.mostRecentClass)
+        certifiedGraduateLabel.text = user.hasGraduated ? "Certified Graduate" : "Current Student"
+        checkMarkForGraduateImageView.image = user.hasGraduated ? UIImage(named: "xcaBadgeCheck") : nil
+        aboutLabel.attributedText = ProfileCourseAndAboutView.createTitleAndDescription(withTitle: "About", withDescription: user.description)
+        self.setNeedsLayout()
+    }
+    
     func setConstraints() {
         addSubview(courseTitleAndDescriptionLabel)
         addSubview(certifiedGraduateLabel)

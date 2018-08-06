@@ -37,6 +37,7 @@ class Student {
     var email: String
     var currentLocation: String
     var graduationDate: Date
+    var hasGraduated: Bool
     var profilePhoto: String
     var profilePhotoImage: UIImage = UIImage(named: "profile_empty_large")!
     var contactLinks: [String]?
@@ -44,6 +45,10 @@ class Student {
     var currentClassUUIDs: [String]
     var previousClassUUIDs: [String]
     var currentClasses: [Class]?
+    var mostRecentClass: String {
+        return "iOS Development"
+    }
+    var hasBadged: Bool
     var previousClasses: [Class]?
     var userUuid: String
     var id: StudentID {
@@ -89,7 +94,7 @@ class Student {
          graduationDate: Date = Date(),
          previousClass: [String] = [String](),
          currentClass: [String] = [String](),
-         userUuid: String) {
+         userUuid: String, hasBadged: Bool, hasGraduated: Bool = false) {
         
         self.name = name
         self.profilePhoto = profilePhoto
@@ -106,6 +111,8 @@ class Student {
         self.previousClassUUIDs = previousClass
         self.currentClassUUIDs = currentClass
         self.userUuid = userUuid
+        self.hasBadged = hasBadged
+        self.hasGraduated = hasGraduated
     }
     
     init?(jsonDictionary: [String: Any], uuidString: String) {
@@ -137,5 +144,7 @@ class Student {
         self.currentClassUUIDs = currentClassUUIDs
         self.previousClassUUIDs = previousClassUUIDs
         self.userUuid = uuidString
+        self.hasBadged = false
+        self.hasGraduated = false
     }
 }
