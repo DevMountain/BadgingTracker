@@ -12,6 +12,12 @@ class FeedCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
     // UI
+    var feedPost: FeedPost? {
+        didSet {
+            self.setupViews()
+        }
+    }
+    
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -62,6 +68,7 @@ class FeedCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Your assessment three has been graded by Jay$Money. You scored a 90%."
         label.font = UIFont.mainFontRegular(ofSize: 16)
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
         label.numberOfLines = 0
         return label
     }()
@@ -80,12 +87,22 @@ class FeedCollectionViewCell: UICollectionViewCell {
         return view
     }()
     
-    let likeButton: UIButton = {
+    var calculatedHeight: CGFloat {
+        return profileImageView.frame.height +
+               bodyTextLabel.frame.height +
+               likeButton.frame.height +
+               seperatorView.frame.height +
+               likesTotalLabel.frame.height
+    }
+    
+    var likeButton: UIButton = {
         let button = UIButton(type: UIButtonType.system)
-        button.setImage(#imageLiteral(resourceName: "xcaHeart").withRenderingMode(.alwaysOriginal), for: .normal)
+        let image = UIImage(named: "heartEmpty")!
+        button.setImage(image.withRenderingMode(.alwaysOriginal), for: .normal)
         button.setAttributedTitle(NSAttributedString(string: " Like", attributes: [
             NSAttributedStringKey.font : UIFont.mainFontRegular(ofSize:12)
             ]), for: .normal)
+        button.addTarget(self, action: #selector(likeButtonPressed), for: .touchUpInside)
         button.tintColor = #colorLiteral(red: 0.6745098039, green: 0.6745098039, blue: 0.6745098039, alpha: 1)
         return button
     }()
@@ -94,12 +111,11 @@ class FeedCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        let screenWidth = UIScreen.main.bounds.size.width
-        widthAnchor.constraint(equalToConstant: screenWidth - 11 - 11)
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupViews()
         setupCell()
         setupConstraints()
     }
@@ -108,7 +124,52 @@ class FeedCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @objc func likeButtonPressed() {
+        guard let feedPost = feedPost else {
+            return
+        }
+        feedPost.hasBeenLiked = !feedPost.hasBeenLiked
+        setupLikeButton()
+    }
+    
+    func setupLikeButton() {
+        guard let feedPost = feedPost else {
+            return
+        }
+        likeButton.setAttributedTitle(NSAttributedString(string: feedPost.hasBeenLiked ? " Liked" : " Like", attributes: [
+            NSAttributedStringKey.font : UIFont.mainFontRegular(ofSize:12)
+            ]), for: .normal)
+        let heartImage = feedPost.hasBeenLiked ? UIImage(named: "heartFilled")! : UIImage(named: "heartEmpty")!
+        likeButton.setImage(heartImage.withRenderingMode(.alwaysOriginal), for: .normal)
+    }
+    
     // MARK: - Setup
+    private func setupViews() {
+        guard let feedPost = feedPost else {
+            return
+        }
+        self.nameLabel.text = feedPost.senderName
+        let attributedString = NSMutableAttributedString(string: feedPost.timeSince, attributes: [
+            NSAttributedStringKey.font : UIFont.mainFontRegular(ofSize: 12),
+            NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
+            
+            ])
+        attributedString.append(NSAttributedString(string: " • ", attributes: [
+            NSAttributedStringKey.font : UIFont.systemFont(ofSize: 8),
+            NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
+            ]))
+        attributedString.append(NSAttributedString(string: feedPost.isPrivateText, attributes: [
+            NSAttributedStringKey.font : UIFont.mainFontRegular(ofSize: 12),
+            NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
+            ]))
+        self.postTypeLabel.attributedText = attributedString
+        self.bodyTextLabel.text = feedPost.text
+        self.bodyTextLabel.sizeToFit()
+        self.likesTotalLabel.text = "\(feedPost.likesText) likes"
+        self.setupLikeButton()
+        self.profileImageView.image = feedPost.senderImage
+    }
+    
     private func setupCell() {
         layer.cornerRadius = 3
         layer.masksToBounds = false
