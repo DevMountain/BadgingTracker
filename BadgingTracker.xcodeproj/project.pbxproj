@@ -36,6 +36,7 @@
 		813E2FF720E1919100D10BF9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FF620E1919100D10BF9 /* SettingsViewController.swift */; };
 		813E2FF920E195F400D10BF9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */; };
 		813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */; };
+		8146084A21122A1B00C2029F /* SettingsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146084921122A1B00C2029F /* SettingsHeader.swift */; };
 		814D60EB20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D60EA20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift */; };
 		81628D7520EFF9A0007C2D0C /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81628D7420EFF9A0007C2D0C /* ProfileHeaderView.swift */; };
 		816FB1C52110FD0D0080323D /* ProfileCourseAndAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816FB1C42110FD0D0080323D /* ProfileCourseAndAboutView.swift */; };
@@ -45,6 +46,7 @@
 		8186C62020E4293500B4DD24 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C60220E4293500B4DD24 /* SF-Pro-Text-Semibold.otf */; };
 		8186C62420E4293500B4DD24 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8186C60620E4293500B4DD24 /* SF-Pro-Text-Medium.otf */; };
 		8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */; };
+		81E46080211245790013F53B /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E4607F211245790013F53B /* SettingsTableViewCell.swift */; };
 		81E896A520EED17A0001CC07 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E896A420EED17A0001CC07 /* SearchTableViewCell.swift */; };
 		B0158AAC20EE9AD100433281 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0158AAB20EE9AD100433281 /* AuthenticationController.swift */; };
 		B0158AAE20EEB44300433281 /* ClassModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0158AAD20EEB44300433281 /* ClassModelController.swift */; };
@@ -85,6 +87,7 @@
 		813E2FF620E1919100D10BF9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		813E2FF820E195F400D10BF9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		8146084921122A1B00C2029F /* SettingsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeader.swift; sourceTree = "<group>"; };
 		814D60EA20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		81628D7420EFF9A0007C2D0C /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		816FB1C42110FD0D0080323D /* ProfileCourseAndAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCourseAndAboutView.swift; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 		8186C60220E4293500B4DD24 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		8186C60620E4293500B4DD24 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		81E4607F211245790013F53B /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		81E896A420EED17A0001CC07 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		8CB9975726F16F0CC0825A6A /* Pods-BadgingTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadgingTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BadgingTracker/Pods-BadgingTracker.release.xcconfig"; sourceTree = "<group>"; };
 		8DF122F353158262E84DA189 /* Pods-BadgingTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadgingTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BadgingTracker/Pods-BadgingTracker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				814D60EA20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift */,
 				81E896A420EED17A0001CC07 /* SearchTableViewCell.swift */,
 				8128BBB521111965005EBC96 /* ProfileTab */,
+				8146084B21122A1D00C2029F /* SettingsTab */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +271,15 @@
 				5E9DF37E21122ADD0011374E /* Date+from.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8146084B21122A1D00C2029F /* SettingsTab */ = {
+			isa = PBXGroup;
+			children = (
+				8146084921122A1B00C2029F /* SettingsHeader.swift */,
+				81E4607F211245790013F53B /* SettingsTableViewCell.swift */,
+			);
+			path = SettingsTab;
 			sourceTree = "<group>";
 		};
 		8186C5EA20E4293500B4DD24 /* SF Pro */ = {
@@ -449,6 +463,7 @@
 			files = (
 				5E3B5C3F20E6DE920027A2D2 /* Array+Extensions.swift in Sources */,
 				813E2FF920E195F400D10BF9 /* UIView+Extensions.swift in Sources */,
+				81E46080211245790013F53B /* SettingsTableViewCell.swift in Sources */,
 				5EC5FBB020EE8FF6008A63F2 /* AssessementDescription.swift in Sources */,
 				813E2FEE20E1913B00D10BF9 /* DirectoryViewController.swift in Sources */,
 				8128BBB421111643005EBC96 /* UIViewController+Extensions.swift in Sources */,
@@ -472,6 +487,7 @@
 				5EC5FBB420EE8FF6008A63F2 /* Posts.swift in Sources */,
 				5EC5FBB320EE8FF6008A63F2 /* Requirement.swift in Sources */,
 				5EC5FBB120EE8FF6008A63F2 /* Assessment.swift in Sources */,
+				8146084A21122A1B00C2029F /* SettingsHeader.swift in Sources */,
 				81628D7520EFF9A0007C2D0C /* ProfileHeaderView.swift in Sources */,
 				8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */,
 				B0158AAC20EE9AD100433281 /* AuthenticationController.swift in Sources */,
