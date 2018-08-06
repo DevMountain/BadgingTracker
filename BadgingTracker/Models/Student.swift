@@ -26,8 +26,6 @@ class Student {
         static let phoneKey = "phone"
         static let currentClassesKey = "currentClasses"
         static let previousClassesKey = "previousClasses"
-        static let isMentorKey = "isMentor"
-        static let isInstructorKey = "isInstructor"
     }
     
     var name: String
@@ -54,35 +52,27 @@ class Student {
     var id: StudentID {
         return self.userUuid
     }
-    var dictionaryRepresentation: [String: Any] {
-        var dictionary: [String: Any] = [
+    var dictionaryRepresentation: [String: Any?] {
+        let dictionary: [String: Any?] = [
             Constants.nameKey: self.name,
             Constants.titleKey: self.title,
             Constants.descriptionKey: self.description,
+            Constants.phoneKey: self.phone ?? nil,
             Constants.emailKey: self.email,
             Constants.currentLocationKey: self.currentLocation,
-            Constants.graduationDateKey: self.graduationDate.timeIntervalSince1970,
+            Constants.graduationDateKey: self.graduationDate,
             Constants.profilePhotoKey: self.profilePhoto,
             Constants.isPrivateKey: self.isPrivate,
+            Constants.contactLinkKey: self.contactLinks ?? nil,
             Constants.currentClassesKey: self.currentClassUUIDs.toDictionary(withDefaultValue: true),
             Constants.previousClassesKey: self.previousClassUUIDs.toDictionary(withDefaultValue: true)
         ]
-        if let phone = self.phone {
-            dictionary[Constants.phoneKey] = phone
-        } else {
-            dictionary[Constants.phoneKey] = nil
-        }
-        if let contactLinks = self.contactLinks {
-            dictionary[Constants.contactLinkKey] = contactLinks
-        } else {
-            dictionary[Constants.contactLinkKey] = nil
-        }
         return dictionary
     }
     var jsonData: Data? {
         return try? JSONSerialization.data(withJSONObject: dictionaryRepresentation, options: .prettyPrinted)
     }
-
+    
     init(name: String,
          title: String,
          description: String,
@@ -117,14 +107,14 @@ class Student {
     
     init?(jsonDictionary: [String: Any], uuidString: String) {
         guard let name = jsonDictionary[Constants.nameKey] as? String,
-              let photo = jsonDictionary[Constants.profilePhotoKey] as? String,
-              let title = jsonDictionary[Constants.contactLinkKey] as? String,
-              let currentLocation = jsonDictionary[Constants.currentLocationKey] as? String,
-              let isPrivate = jsonDictionary[Constants.isPrivateKey] as? Bool,
-              let studentDescription = jsonDictionary[Constants.descriptionKey] as? String,
-              let graduationDate  = jsonDictionary[Constants.graduationDateKey] as? Double,
-              let email = jsonDictionary[Constants.emailKey] as? String,
-              let previousClassUUIDs = jsonDictionary[Constants.previousClassesKey] as? [String],
+            let photo = jsonDictionary[Constants.profilePhotoKey] as? String,
+            let title = jsonDictionary[Constants.contactLinkKey] as? String,
+            let currentLocation = jsonDictionary[Constants.currentLocationKey] as? String,
+            let isPrivate = jsonDictionary[Constants.isPrivateKey] as? Bool,
+            let studentDescription = jsonDictionary[Constants.descriptionKey] as? String,
+            let graduationDate  = jsonDictionary[Constants.graduationDateKey] as? Double,
+            let email = jsonDictionary[Constants.emailKey] as? String,
+            let previousClassUUIDs = jsonDictionary[Constants.previousClassesKey] as? [String],
             let currentClassUUIDs = jsonDictionary[Constants.currentClassesKey] as? [String] else {
                 return nil
         }

@@ -9,7 +9,7 @@
 import UIKit
 
 class SignUpPageViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -17,9 +17,7 @@ class SignUpPageViewController: UIViewController {
         setUpLoginButton()
         setUpBottomDescription()
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+ 
     let nameTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Full Name"
@@ -39,7 +37,7 @@ class SignUpPageViewController: UIViewController {
         
         return textField
     }()
-
+    
     let emailTextFiled: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Email"
@@ -95,8 +93,8 @@ class SignUpPageViewController: UIViewController {
         stackView.axis = .vertical
         stackView.spacing = 10
         stackView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 186, paddingLeft: 50, paddingBottom: 0, paddingRight: 50, width: 0, height: 240)
-}
-   fileprivate func setUpLoginButton() {
+    }
+    fileprivate func setUpLoginButton() {
         view.addSubview(signUpButton)
         signUpButton.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 88, paddingBottom: 129, paddingRight: 88, width: 0, height: 44)
     }

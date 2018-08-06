@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		011930452108EE4A00388958 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011930442108EE4A00388958 /* TestViewController.swift */; };
-		017009E421079962009D1219 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017009E321079962009D1219 /* SignInViewController.swift */; };
 		017009E82107A206009D1219 /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017009E72107A206009D1219 /* GithubUser.swift */; };
 		017009EA2107A275009D1219 /* OAuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017009E92107A275009D1219 /* OAuthHelper.swift */; };
 		017009ED2107A74E009D1219 /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017009EC2107A74E009D1219 /* NetworkingController.swift */; };
@@ -18,6 +16,7 @@
 		01A383B8211353E9005AEB6C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A383B7211353E9005AEB6C /* Repository.swift */; };
 		01F4C96B21064E8E000649EE /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F4C96A21064E8E000649EE /* URL+Extensions.swift */; };
 		01F4C96F210670F5000649EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F4C96E210670F5000649EE /* Main.storyboard */; };
+		01F623822118F081000BFBB2 /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F623812118F081000BFBB2 /* SignUpPageViewController.swift */; };
 		01FC1A5320F3F7DB00AE9F38 /* GithubAuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC1A5220F3F7DB00AE9F38 /* GithubAuthenticationController.swift */; };
 		01FC1A5620F3F82600AE9F38 /* GithubProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC1A5520F3F82600AE9F38 /* GithubProtocol.swift */; };
 		01FC1A5920F3FA8D00AE9F38 /* ErrorHandeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC1A5820F3FA8D00AE9F38 /* ErrorHandeling.swift */; };
@@ -62,14 +61,10 @@
 		B0158AAC20EE9AD100433281 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0158AAB20EE9AD100433281 /* AuthenticationController.swift */; };
 		B0158AAE20EEB44300433281 /* ClassModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0158AAD20EEB44300433281 /* ClassModelController.swift */; };
 		B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC1F20E72406003C143E /* LogInPageViewController.swift */; };
-		B046CC2220E818A3003C143E /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046CC2120E818A3003C143E /* SignUpPageViewController.swift */; };
 		B04A1D9720EAEE6800AA9BC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B04A1D9620EAEE6800AA9BC2 /* GoogleService-Info.plist */; };
-		B05CCDC220E6F8CB00AC6D3B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05CCDC120E6F8CB00AC6D3B /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		011930442108EE4A00388958 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		017009E321079962009D1219 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		017009E72107A206009D1219 /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
 		017009E92107A275009D1219 /* OAuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthHelper.swift; sourceTree = "<group>"; };
 		017009EC2107A74E009D1219 /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
@@ -81,6 +76,7 @@
 		01A383B7211353E9005AEB6C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		01F4C96A21064E8E000649EE /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		01F4C96E210670F5000649EE /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		01F623812118F081000BFBB2 /* SignUpPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPageViewController.swift; sourceTree = "<group>"; };
 		01FC1A5220F3F7DB00AE9F38 /* GithubAuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAuthenticationController.swift; sourceTree = "<group>"; };
 		01FC1A5520F3F82600AE9F38 /* GithubProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubProtocol.swift; sourceTree = "<group>"; };
 		01FC1A5820F3FA8D00AE9F38 /* ErrorHandeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandeling.swift; sourceTree = "<group>"; };
@@ -127,9 +123,7 @@
 		B0158AAB20EE9AD100433281 /* AuthenticationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
 		B0158AAD20EEB44300433281 /* ClassModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassModelController.swift; sourceTree = "<group>"; };
 		B046CC1F20E72406003C143E /* LogInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInPageViewController.swift; path = BadgingTracker/KEViews/LogInPageViewController.swift; sourceTree = SOURCE_ROOT; };
-		B046CC2120E818A3003C143E /* SignUpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpPageViewController.swift; path = BadgingTracker/KEViews/SignUpPageViewController.swift; sourceTree = SOURCE_ROOT; };
 		B04A1D9620EAEE6800AA9BC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B05CCDC120E6F8CB00AC6D3B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = BadgingTracker/KEViews/LogInViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,9 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				81270A5520E2B03F005F7152 /* FeedCollectionViewCell.swift */,
-
 				01F4C96E210670F5000649EE /* Main.storyboard */,
-
 				814D60EA20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift */,
 				81E896A420EED17A0001CC07 /* SearchTableViewCell.swift */,
 				8128BBB521111965005EBC96 /* ProfileTab */,
@@ -322,9 +314,7 @@
 				813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */,
 				8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */,
 				5E3B5C3E20E6DE920027A2D2 /* Array+Extensions.swift */,
-
 				01F4C96A21064E8E000649EE /* URL+Extensions.swift */,
-
 				8128BBB321111643005EBC96 /* UIViewController+Extensions.swift */,
 				5E9DF37E21122ADD0011374E /* Date+from.swift */,
 			);
@@ -356,7 +346,6 @@
 			children = (
 				B0158AAB20EE9AD100433281 /* AuthenticationController.swift */,
 				B0158AAD20EEB44300433281 /* ClassModelController.swift */,
-
 				01FC1A5220F3F7DB00AE9F38 /* GithubAuthenticationController.swift */,
 				5E9DF37C211228BF0011374E /* UserController.swift */,
 				5E9DF3802112316A0011374E /* FeedController.swift */,
@@ -367,11 +356,8 @@
 		B05CCDC020E6F88800AC6D3B /* KEViews */ = {
 			isa = PBXGroup;
 			children = (
-				B05CCDC120E6F8CB00AC6D3B /* LogInViewController.swift */,
 				B046CC1F20E72406003C143E /* LogInPageViewController.swift */,
-				B046CC2120E818A3003C143E /* SignUpPageViewController.swift */,
-				017009E321079962009D1219 /* SignInViewController.swift */,
-				011930442108EE4A00388958 /* TestViewController.swift */,
+				01F623812118F081000BFBB2 /* SignUpPageViewController.swift */,
 			);
 			path = KEViews;
 			sourceTree = "<group>";
@@ -527,13 +513,9 @@
 				5E3B5C3F20E6DE920027A2D2 /* Array+Extensions.swift in Sources */,
 				813E2FF920E195F400D10BF9 /* UIView+Extensions.swift in Sources */,
 				81E46080211245790013F53B /* SettingsTableViewCell.swift in Sources */,
-
-				011930452108EE4A00388958 /* TestViewController.swift in Sources */,
 				5EC5FBB020EE8FF6008A63F2 /* AssessementDescription.swift in Sources */,
 				813E2FEE20E1913B00D10BF9 /* DirectoryViewController.swift in Sources */,
-
 				01FC1A5620F3F82600AE9F38 /* GithubProtocol.swift in Sources */,
-
 				8128BBB421111643005EBC96 /* UIViewController+Extensions.swift in Sources */,
 				B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */,
 				8128BBBD211119EC005EBC96 /* AssessmentCollectionViewCell.swift in Sources */,
@@ -542,9 +524,6 @@
 				814D60EB20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift in Sources */,
 				8128BBB72111198A005EBC96 /* AssessmentsCollectionViewController.swift in Sources */,
 				813E2FFC20E1973800D10BF9 /* UIColor+Extensions.swift in Sources */,
-				017009E421079962009D1219 /* SignInViewController.swift in Sources */,
-				B046CC2220E818A3003C143E /* SignUpPageViewController.swift in Sources */,
-				B05CCDC220E6F8CB00AC6D3B /* LogInViewController.swift in Sources */,
 				813E2FF120E1915D00D10BF9 /* ProfileViewController.swift in Sources */,
 				5EC5FBB620EE8FF6008A63F2 /* Mentor.swift in Sources */,
 				017009EA2107A275009D1219 /* OAuthHelper.swift in Sources */,
@@ -560,11 +539,10 @@
 				5EC5FBB420EE8FF6008A63F2 /* Posts.swift in Sources */,
 				01FC1A5920F3FA8D00AE9F38 /* ErrorHandeling.swift in Sources */,
 				5EC5FBB320EE8FF6008A63F2 /* Requirement.swift in Sources */,
+				01F623822118F081000BFBB2 /* SignUpPageViewController.swift in Sources */,
 				01F4C96B21064E8E000649EE /* URL+Extensions.swift in Sources */,
 				5EC5FBB120EE8FF6008A63F2 /* Assessment.swift in Sources */,
-
 				01FC1A5320F3F7DB00AE9F38 /* GithubAuthenticationController.swift in Sources */,
-
 				8146084A21122A1B00C2029F /* SettingsHeader.swift in Sources */,
 				81628D7520EFF9A0007C2D0C /* ProfileHeaderView.swift in Sources */,
 				8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */,

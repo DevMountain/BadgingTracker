@@ -109,7 +109,7 @@ class LogInPageViewController: UIViewController {
             let mainTabBarController = MainTabBarController()
             self.present(mainTabBarController, animated: true)
        }
-    }
+    
 }
 
 extension UITextField {
