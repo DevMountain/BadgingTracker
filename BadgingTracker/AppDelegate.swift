@@ -32,11 +32,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            try firebaseAuth.signOut()
 //        } catch let signOutError as NSError {
 //            print ("Error signing out: %@", signOutError)
+
 //        }
 
         window = UIWindow()
 
         window?.rootViewController = LogInPageViewController()
+
+//
+//        window = UIWindow()
+//        window?.rootViewController = LogInPageViewController()
 //        ClassModelController.shared.createAssessementDescription { (success) in
 //            print("Thing 1")
 //        }
@@ -61,12 +66,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        ClassModelController.shared.createPosts { (Success) in
 //            print("Something")
 //        }
+
         
         ClassModelController.shared.fetchClasses { (success) in
             print("Got it")
         }
 
         window?.rootViewController = MainTabBarController()
+
         return true
     }
 

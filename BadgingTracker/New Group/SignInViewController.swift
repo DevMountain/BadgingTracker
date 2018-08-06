@@ -10,19 +10,63 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import WebKit
+import SafariServices
 
-class SignInViewController: UIViewController , WKNavigationDelegate {
+class SignInViewController: UIViewController , WKNavigationDelegate, SFSafariViewControllerDelegate {
     
     var webView: WKWebView!
     var URLString = String()
     var test = 0
     var code = String()
     var accessToken = String()
+    var gitHubUser: GithubUser? {
+        didSet {
+            self.title = gitHubUser?.name
+        }
+    }
+    
+    private lazy var githubAuthenticationController: GithubAuthenticationController = {
+        let githubHelper = OAuthHelper(clientID: "f12aef8c339d10b287d7", clientSecret: "3a010d2a4d800d6260edcc2aa73b340f1872b381", scopes: ["read:user"])
+        return GithubAuthenticationController(helper: githubHelper)
+    }()
+    
+    private func fetchUser() {
+        githubAuthenticationController.fetchUser { (response) in
+            switch response {
+            case let .success(user):
+                self.gitHubUser = user
+            case let .failure(error):
+                if error == .unauthorized {
+                    print("bad")
+                } else {
+                    self.logIn()
+                }
+            }
+        }
+    }
+    
+    
+    private func logIn() {
+        githubAuthenticationController.logIn { (response) in
+            switch response {
+            case .success:
+                self.fetchUser()
+            case .failure:
+                self.logIn()
+                print("faileure to fetchUSer")
+            }
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
     }
+    
+//    func safariViewController(_ controller: SFSafariViewController, activityItemsFor URL: URL, title: String?) -> [UIActivity] {
+//        
+//    }
     
     func loadGitHubSignIn() {
         let url = URL(string: "https://github.com/login/oauth/authorize?client_id=f12aef8c339d10b287d7")
@@ -95,6 +139,7 @@ class SignInViewController: UIViewController , WKNavigationDelegate {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }
         request.httpBody = httpBody
+//        request.setValue("application/json", forHTTPHeaderField: "Accept")
         
         
         //Create the session!
@@ -170,6 +215,12 @@ class SignInViewController: UIViewController , WKNavigationDelegate {
     
     
     @IBAction func signInTapped(_ sender: Any) {
-        loadGitHubSignIn()
+        if gitHubUser == nil {
+            logIn()
+        } else {
+            gitHubUser = nil
+            githubAuthenticationController.logOut()
+            
+        }
     }
 }

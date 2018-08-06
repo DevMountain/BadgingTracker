@@ -34,7 +34,7 @@ class AuthenticationController {
         }
     }
     
-<<<<<<< HEAD
+
     func createUser(email: String, password : String, completion: @escaping (Bool)-> Void) {
         
         Auth.auth().createUser(withEmail: email, password: password) { (user, err) in
@@ -57,7 +57,7 @@ class AuthenticationController {
         }
         
     }
-=======
+
 //    func createUser(email: String, password : String, completion: @escaping (Bool)-> Void) {
 //        Auth.auth().createUser(withEmail: email, password: password) { (user, err) in
 //            if let err = err {
@@ -96,7 +96,6 @@ class AuthenticationController {
 //           
 //        }
 //    }
->>>>>>> 0463b1154ae93b115d1415d3cc17c9da81d545df
     
     
    

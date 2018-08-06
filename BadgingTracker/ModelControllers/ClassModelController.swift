@@ -12,7 +12,7 @@ import Firebase
 class ClassModelController {
     
     static let shared : ClassModelController = ClassModelController()
-<<<<<<< HEAD
+
     private var classDatabaseRef : DatabaseReference = Database.database().reference().child("classes")
     private var assessmentDescriptionRef : DatabaseReference = Database.database().reference().child("assessementDescriptions")
     private var assessmentRef : DatabaseReference = Database.database().reference().child("assessments")
@@ -31,7 +31,8 @@ class ClassModelController {
 //            }
 //            completion(true)
 //        }
-=======
+    }
+
     private var classDatabaseRef : DatabaseReference = Database.database().reference().child("class")
     private var assessmentDescriptionRef : DatabaseReference = Database.database().reference().child("assessementDescription")
     private var assessmentRef : DatabaseReference = Database.database().reference().child("assessment")
@@ -55,7 +56,6 @@ class ClassModelController {
             }
             completion(true)
         }
->>>>>>> 0463b1154ae93b115d1415d3cc17c9da81d545df
     }
     
     func createAssessementDescription(completion: @escaping (Bool) -> Void) {
@@ -102,7 +102,7 @@ class ClassModelController {
         }
     }
     
-<<<<<<< HEAD
+
     func createPosts(completion: @escaping (Bool) -> Void) {
         let newPost = Post(message: "Alogithm - Word used by programmers when they do not want to explain what they did", senderUUID: UUID().uuidString, timestamp: Date(), likes: ["Trevor","Frank"], uuid: UUID())
         
@@ -114,9 +114,7 @@ class ClassModelController {
             completion(true)
         }
     }
-    
-=======
->>>>>>> 0463b1154ae93b115d1415d3cc17c9da81d545df
+
     // Fetch Functions
     func fetchClasses(completion: @escaping ([Class]?) -> Void) {
         classDatabaseRef.observe(.value) { (snapShot) in
@@ -139,26 +137,20 @@ class ClassModelController {
                     devClass.assessmentDescriptions = assessmentDescriptions
                 })
                 for (studentID, assessmentIDDict) in devClass.scoredAssessmentUUIDs {
-<<<<<<< HEAD
                     for (assessmentID, _) in assessmentIDDict {
-=======
                     for assessmentID in assessmentIDDict {
->>>>>>> 0463b1154ae93b115d1415d3cc17c9da81d545df
                         self.fetchAssessment(withID: assessmentID, completion: { (assessment) in
                             guard let assessment = assessment else {
                                 return
                             }
-<<<<<<< HEAD
                             if devClass.scoredAssessments[studentID] == nil {
                                 devClass.scoredAssessments[studentID] = [Assessment]()
                             }
                             devClass.scoredAssessments[studentID]?.append(assessment)
-=======
 //                            if devClass.scoredAssessments[studentID] == nil {
 //                                devClass.scoredAssessments[studentID] = [Assessment]()
 //                            }
 //                            devClass.scoredAssessments[studentID]?.append(assessment)
->>>>>>> 0463b1154ae93b115d1415d3cc17c9da81d545df
                         })
                     }
                 }
@@ -194,11 +186,7 @@ class ClassModelController {
     func fetchAssessment(withID id: String, completion: @escaping (Assessment?) -> Void) {
         
     }
-<<<<<<< HEAD
-   
-=======
-    
->>>>>>> 0463b1154ae93b115d1415d3cc17c9da81d545df
+
     
     func fetchRequirementDescriptions
         (withID id: String, completion: @escaping (RequirementDescription?) -> Void) {
@@ -234,11 +222,7 @@ class ClassModelController {
     func fetchPosts(forUserId id: String, completion: @escaping ([Post]?) -> Void) {
         
     }
-<<<<<<< HEAD
-=======
-    
-    
->>>>>>> 0463b1154ae93b115d1415d3cc17c9da81d545df
+
 }
     
     

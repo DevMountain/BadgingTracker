@@ -99,15 +99,14 @@ class LogInPageViewController: UIViewController {
             if success {
                 self.view.endEditing(true)
             }
-<<<<<<< HEAD
+
         }
-=======
+
             self.view.endEditing(true)
             let mainTabBarController = MainTabBarController()
             UserController.shared.loggedInUser = UserController.shared.student10
             self.present(mainTabBarController, animated: true)
        }
->>>>>>> 0463b1154ae93b115d1415d3cc17c9da81d545df
     }
 }
 

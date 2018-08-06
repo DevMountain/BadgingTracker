@@ -17,7 +17,16 @@ struct GithubUser: Decodable {
         return name ?? login
     }
     
+    var repositories: [Repository]
+    
     enum CodingKeys: String, CodingKey {
         case name, login
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        name = try? container.decode(String.self, forKey: .name)
+        login = try container.decode(String.self, forKey: .login)
+        repositories = []
     }
 }
