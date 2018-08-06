@@ -10,10 +10,9 @@ target 'BadgingTracker' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
-<<<<<<< HEAD
+
   
-=======
+
   pod 'Firebase/Storage'
->>>>>>> 0463b1154ae93b115d1415d3cc17c9da81d545df
 
 end

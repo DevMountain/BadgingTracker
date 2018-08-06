@@ -209,14 +209,13 @@
 			isa = PBXGroup;
 			children = (
 				81270A5520E2B03F005F7152 /* FeedCollectionViewCell.swift */,
-<<<<<<< HEAD
+
 				01F4C96E210670F5000649EE /* Main.storyboard */,
-=======
+
 				814D60EA20EE8A2F004CCC32 /* FeedHeaderCollectionViewCell.swift */,
 				81E896A420EED17A0001CC07 /* SearchTableViewCell.swift */,
 				8128BBB521111965005EBC96 /* ProfileTab */,
 				8146084B21122A1D00C2029F /* SettingsTab */,
->>>>>>> 0463b1154ae93b115d1415d3cc17c9da81d545df
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,12 +317,11 @@
 				813E2FFB20E1973800D10BF9 /* UIColor+Extensions.swift */,
 				8186C62720E4294B00B4DD24 /* UIFont+Extension.swift */,
 				5E3B5C3E20E6DE920027A2D2 /* Array+Extensions.swift */,
-<<<<<<< HEAD
+
 				01F4C96A21064E8E000649EE /* URL+Extensions.swift */,
-=======
+
 				8128BBB321111643005EBC96 /* UIViewController+Extensions.swift */,
 				5E9DF37E21122ADD0011374E /* Date+from.swift */,
->>>>>>> 0463b1154ae93b115d1415d3cc17c9da81d545df
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -353,12 +351,10 @@
 			children = (
 				B0158AAB20EE9AD100433281 /* AuthenticationController.swift */,
 				B0158AAD20EEB44300433281 /* ClassModelController.swift */,
-<<<<<<< HEAD
+
 				01FC1A5220F3F7DB00AE9F38 /* GithubAuthenticationController.swift */,
-=======
 				5E9DF37C211228BF0011374E /* UserController.swift */,
 				5E9DF3802112316A0011374E /* FeedController.swift */,
->>>>>>> 0463b1154ae93b115d1415d3cc17c9da81d545df
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -527,11 +523,10 @@
 				81E46080211245790013F53B /* SettingsTableViewCell.swift in Sources */,
 				5EC5FBB020EE8FF6008A63F2 /* AssessementDescription.swift in Sources */,
 				813E2FEE20E1913B00D10BF9 /* DirectoryViewController.swift in Sources */,
-<<<<<<< HEAD
+
 				01FC1A5620F3F82600AE9F38 /* GithubProtocol.swift in Sources */,
-=======
+
 				8128BBB421111643005EBC96 /* UIViewController+Extensions.swift in Sources */,
->>>>>>> 0463b1154ae93b115d1415d3cc17c9da81d545df
 				B046CC2020E72406003C143E /* LogInPageViewController.swift in Sources */,
 				8128BBBD211119EC005EBC96 /* AssessmentCollectionViewCell.swift in Sources */,
 				813E2FE820E18EE300D10BF9 /* MainTabBarController.swift in Sources */,
@@ -558,12 +553,11 @@
 				5EC5FBB320EE8FF6008A63F2 /* Requirement.swift in Sources */,
 				01F4C96B21064E8E000649EE /* URL+Extensions.swift in Sources */,
 				5EC5FBB120EE8FF6008A63F2 /* Assessment.swift in Sources */,
-<<<<<<< HEAD
+
 				01FC1A5320F3F7DB00AE9F38 /* GithubAuthenticationController.swift in Sources */,
-=======
+
 				8146084A21122A1B00C2029F /* SettingsHeader.swift in Sources */,
 				81628D7520EFF9A0007C2D0C /* ProfileHeaderView.swift in Sources */,
->>>>>>> 0463b1154ae93b115d1415d3cc17c9da81d545df
 				8186C62820E4294B00B4DD24 /* UIFont+Extension.swift in Sources */,
 				B0158AAC20EE9AD100433281 /* AuthenticationController.swift in Sources */,
 				8128BBBF2111218C005EBC96 /* ContainerViewForAssessments.swift in Sources */,

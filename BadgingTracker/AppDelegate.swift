@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-<<<<<<< HEAD
+
 //        window = UIWindow()
 //        window?.rootViewController = LogInViewController()
         
@@ -33,9 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        } catch let signOutError as NSError {
 //            print ("Error signing out: %@", signOutError)
 //        }
-=======
+
         window = UIWindow()
-<<<<<<< HEAD
+
         window?.rootViewController = LogInPageViewController()
 //        ClassModelController.shared.createAssessementDescription { (success) in
 //            print("Thing 1")
@@ -65,10 +65,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ClassModelController.shared.fetchClasses { (success) in
             print("Got it")
         }
->>>>>>> 1e121a87d696fe5ab6038ce2bf5b3b426a76c526
-=======
+
         window?.rootViewController = MainTabBarController()
->>>>>>> 0463b1154ae93b115d1415d3cc17c9da81d545df
         return true
     }
 
