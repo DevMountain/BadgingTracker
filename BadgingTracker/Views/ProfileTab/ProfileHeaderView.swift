@@ -57,8 +57,15 @@ class ProfileHeaderView: UIView {
         view.backgroundColor = #colorLiteral(red: 0.7882352941, green: 0.8156862745, blue: 0.8352941176, alpha: 1)
         return view
     }()
+    var user: User!
     
     // MARK: - Initialization
+    convenience init(user: User) {
+        self.init()
+        self.user = user
+        reloadViews()
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setConstraints()
@@ -69,6 +76,14 @@ class ProfileHeaderView: UIView {
     }
     
     // MARK: - Setup
+    func reloadViews() {
+        profilePictureImageView.image = user.profilePhotoImage
+        studentNameLabel.text = user.name
+        courseLabel.text = user.title
+        cityLabel.text = user.currentLocation
+        self.setNeedsLayout()
+    }
+    
     func setConstraints() {
         backgroundColor = .white
         let stackView = UIStackView(arrangedSubviews: [studentNameLabel, courseLabel, cityLabel])
@@ -88,13 +103,3 @@ class ProfileHeaderView: UIView {
     }
     
 }
-
-
-
-
-
-
-
-
-
-
