@@ -84,6 +84,11 @@ class AssessmentCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: - Setup
+    func reloadViews() {
+        
+        self.setNeedsLayout()
+    }
+    
     func setConstraints() {
         // Setup Cell
         layer.cornerRadius = 5

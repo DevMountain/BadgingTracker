@@ -21,10 +21,13 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     /// Sets up the view controllers for the main tab bar
     fileprivate func setupViewControllers() {
         
+        let profileVC = ProfileViewController()
+        profileVC.user = UserController.shared.loggedInUser
+        
         // Setting up the tab bar
         let feedViewController = navigationControllerWith(rootViewController: FeedViewController(collectionViewLayout: UICollectionViewFlowLayout()), unselectedImage: #imageLiteral(resourceName: "xcaFeedUnselected"), selectedImage: #imageLiteral(resourceName: "xcaSelectedFeed"), title: "Feed")
         let directoryViewController = navigationControllerWith(rootViewController: DirectoryViewController(), unselectedImage: #imageLiteral(resourceName: "xcaSearchUnselected"), selectedImage: #imageLiteral(resourceName: "xcaSearchSelected"), title: "Directory")
-        let profileViewController = navigationControllerWith(rootViewController: ProfileViewController(), unselectedImage: #imageLiteral(resourceName: "xcaProfileUnselected"), selectedImage: #imageLiteral(resourceName: "xcaProfileSelected"), title: "Profile")
+        let profileViewController = navigationControllerWith(rootViewController: profileVC, unselectedImage: #imageLiteral(resourceName: "xcaProfileUnselected"), selectedImage: #imageLiteral(resourceName: "xcaProfileSelected"), title: "Profile")
         let settingsViewController = navigationControllerWith(rootViewController: SettingsViewController(), unselectedImage: #imageLiteral(resourceName: "xcaSettingsUnselected"), selectedImage: #imageLiteral(resourceName: "xcaSettingSelected"), title: "Settings")
         tabBar.tintColor = .black
         tabBar.backgroundColor = .white

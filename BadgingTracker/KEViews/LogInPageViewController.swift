@@ -47,8 +47,8 @@ class LogInPageViewController: UIViewController {
         textField.placeholder = "Password"
         textField.borderStyle = .none
         textField.backgroundColor = .clear
+        textField.isSecureTextEntry = true
         textField.font = UIFont.systemFont(ofSize: 14)
-        
         return textField
     }()
     let emailTextFiled: UITextField = {
@@ -71,6 +71,8 @@ class LogInPageViewController: UIViewController {
     fileprivate func setupTextFields() {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView = UIStackView(arrangedSubviews: [emailTextFiled,passwordTextField])
+        emailTextFiled.delegate = self
+        passwordTextField.delegate = self
         view.addSubview(stackView)
         stackView.distribution = .fillEqually
         stackView.axis = .vertical
@@ -103,8 +105,8 @@ class LogInPageViewController: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
             }
             self.view.endEditing(true)
-            let mainTabBarController = MainTabBarController()
             UserController.shared.loggedInUser = UserController.shared.student10
+            let mainTabBarController = MainTabBarController()
             self.present(mainTabBarController, animated: true)
        }
     }
@@ -119,5 +121,16 @@ extension UITextField {
         borderLine.frame = CGRect(x: 0, y: Double(self.frame.height) - height, width: Double(self.frame.width), height: height)
         borderLine.backgroundColor = borderColor
         self.addSubview(borderLine)
+    }
+}
+
+extension LogInPageViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextFiled {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            passwordTextField.resignFirstResponder()
+        }
+        return true
     }
 }

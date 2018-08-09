@@ -17,14 +17,25 @@ class ProfileViewController: UIViewController {
         return scrollView
     }()
     
-    let headerView = ProfileHeaderView()
-    let courseView = ProfileCourseAndAboutView()
-    let socialMediaLinkView = ProfileSocialLinksView()
-    let containerViewForAssessments = ContainerViewForAssessments()
+    var headerView = ProfileHeaderView()
+    var courseView = ProfileCourseAndAboutView()
+    var socialMediaLinkView = ProfileSocialLinksView()
+    var containerViewForAssessments = ContainerViewForAssessments()
+    var user: User? {
+        didSet {
+            if let user = self.user {
+                self.headerView = ProfileHeaderView(user: user)
+                self.courseView = ProfileCourseAndAboutView(user: user)
+                self.socialMediaLinkView = ProfileSocialLinksView(user: user)
+                self.containerViewForAssessments = ContainerViewForAssessments(user: user)
+            }
+        }
+    }
     
     // MARK: - ViewLifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = #colorLiteral(red: 0.9294117647, green: 0.9411764706, blue: 0.9568627451, alpha: 1)
         scrollView.contentSize = CGSize(width: view.frame.width, height: 2000)
         setConstraints()
@@ -65,10 +76,13 @@ class ProfileViewController: UIViewController {
     }
     
     func setupNavBar() {
-        let editButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.edit, target: self, action: #selector(editButtonTapped))
-        editButton.tintColor = #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
-        navigationController?.navigationItem.rightBarButtonItem = editButton
-        navigationItem.rightBarButtonItem = editButton
+        // FIXME: Commented out this edit button for the demo.
+        if false {
+            let editButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.edit, target: self, action: #selector(editButtonTapped))
+            editButton.tintColor = #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
+            navigationController?.navigationItem.rightBarButtonItem = editButton
+            navigationItem.rightBarButtonItem = editButton
+        }
     }
     
     // MARK: - Action Functions / Selectors
