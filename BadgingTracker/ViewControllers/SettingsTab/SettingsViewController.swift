@@ -14,6 +14,7 @@ class SettingsViewController: UITableViewController {
         super.viewDidLoad()
         setupTableViewController()
         view.backgroundColor = .white
+        setDefaultNavigationBar()
     }
     
     // MARK: - Setup

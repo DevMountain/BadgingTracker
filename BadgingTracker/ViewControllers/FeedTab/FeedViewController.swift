@@ -23,6 +23,10 @@ class FeedViewController: UICollectionViewController {
         collectionView?.backgroundColor = #colorLiteral(red: 0.9607843137, green: 0.9607843137, blue: 0.9607843137, alpha: 1)
         collectionView?.register(FeedCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView?.register(FeedHeaderCollectionViewCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier)
+        
+        if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
+        }
         setDefaultNavigationBar()
     }
     
@@ -46,11 +50,9 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            guard let cell = collectionView.cellForItem(at: indexPath) as? FeedCollectionViewCell else {
-            return CGSize(width: view.frame.width - 22, height: view.frame.width * 0.53) // The height is 53% of of the views width
-        }
-        
-        return CGSize(width: view.frame.width - 22, height: cell.calculatedHeight) // 11 + 11 for side insets
+//        let post = FeedController.shared.posts[indexPath.row]
+//        let newHeight = CGFloat(Double(post.text.count))
+        return CGSize(width: view.frame.width - 11, height: (view.frame.width * 0.53))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -59,10 +61,10 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
     
     
     // Header Cell
-//    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        guard let user = UserController.shared.loggedInUser as? Mentor else {
-//            return UICollectionViewCell()
-//        }
+    //    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    //        guard let user = UserController.shared.loggedInUser as? Mentor else {
+    //            return UICollectionViewCell()
+    //        }
 //        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerReuseIdentifier, for: indexPath) as! FeedHeaderCollectionViewCell
 //        header.mentorImageView.image = user.profilePhotoImage
 //        return header
